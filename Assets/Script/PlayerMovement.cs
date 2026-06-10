@@ -49,13 +49,15 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftControl))
         {
+            isCrouching = true;
             playerSpeed = crouchigSpeed;
             capsule.height = crouchingHeight;
-            capsule.center = new Vector3(standingCenter.x, standingCenter.y - (standingHeight - crouchingHeight) / 2f, standingCenter.y);
+            capsule.center = new Vector3(standingCenter.x, standingCenter.y - (standingHeight - crouchingHeight) / 2f, standingCenter.z);
             playerModel.localScale = new Vector3(1, 0.5f, 1);
         }
         else
         {
+            isCrouching = false;
             playerSpeed = walkSpeed;
             capsule.height = standingHeight;
             capsule.center = standingCenter;
@@ -89,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 targetVelocity = inputDirection * playerSpeed;
         
         Vector3 velocity = rigid.linearVelocity;
-        Vector3 velocityChange = new Vector3(targetVelocity.x, 0, targetVelocity.z) - new Vector3(velocity.x, 0, velocity.z);
+        Vector3 velocityChange = new Vector3(targetVelocity.x - velocity.x, 0, targetVelocity.z - velocity.z);
         
         rigid.AddForce(velocityChange, ForceMode.VelocityChange);
     }
