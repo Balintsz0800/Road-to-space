@@ -300,10 +300,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16561963b6c45cf4c813efe089d18c15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MouseMovement
-  mouseSensivity: 100
+  mouseSensivity: 150
   playerBody: {fileID: 1806760706}
   xRot: 0
-  yRot: 0
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,8 +677,8 @@ MonoBehaviour:
   crouchingHeight: 1
   groundCheckDistance: 0.3
   crouchSmooth: 6
+  isCrouching: 0
   groundCheck: {fileID: 233162631}
-  playerModel: {fileID: 1806760706}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8

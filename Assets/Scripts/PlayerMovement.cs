@@ -6,27 +6,23 @@ public class PlayerMovement : MonoBehaviour
     public float playerSpeed;
     public float walkSpeed = 2f;
     public float sprintSpeed = 7f;
-    public float crouchigSpeed = 2f;
+    public float crouchingSpeed = 2f;
     public float jumpHeight = 3f;
-    public float mouseSensivity = 2f;
-    public float standingHeight = 2f;
-    public float crouchingHeight = 1f;
     public float groundCheckDistance = 0.3f;
-    public float crouchSmooth = 6f;
     
     
-    private bool isMoving = false;
     private bool isSprinting = false;
-    private bool isCrouching = false;
+    [HideInInspector] public bool isCrouching = false;
     private bool isGrounded = false;
 
     private Rigidbody rigid;
     private CapsuleCollider capsule;
     
     public Transform groundCheck;
-    public Transform playerModel;
     public LayerMask groundLayer;
-    Vector3 standingCenter;
+
+    public float standingScale;
+    public float crouchingScale;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
         playerSpeed = walkSpeed;
         rigid = GetComponent<Rigidbody>();
         capsule = GetComponent<CapsuleCollider>();
-        standingCenter = capsule.center;
+        standingScale =  transform.localScale.y;
     }
         
     // Update is called once per frame
@@ -50,18 +46,15 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftControl))
         {
             isCrouching = true;
-            playerSpeed = crouchigSpeed;
-            capsule.height = crouchingHeight;
-            capsule.center = new Vector3(standingCenter.x, standingCenter.y - (standingHeight - crouchingHeight) / 2f, standingCenter.z);
-            playerModel.localScale = new Vector3(1, 0.5f, 1);
+            playerSpeed = crouchingSpeed;
+            transform.localScale = new Vector3(transform.localScale.x, crouchingScale, transform.localScale.z);
+            rigid.AddForce(Vector3.down * 2f, ForceMode.Impulse);
         }
         else
         {
             isCrouching = false;
             playerSpeed = walkSpeed;
-            capsule.height = standingHeight;
-            capsule.center = standingCenter;
-            playerModel.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(transform.localScale.x, standingScale, transform.localScale.z);
         }
     }
 
@@ -85,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (isCrouching)
         {
-            playerSpeed = crouchigSpeed;
+            playerSpeed = crouchingSpeed;
         }
         
         Vector3 targetVelocity = inputDirection * playerSpeed;
