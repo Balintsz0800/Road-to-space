@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
             isCrouching = true;
             playerSpeed = crouchingSpeed;
             transform.localScale = new Vector3(transform.localScale.x, crouchingScale, transform.localScale.z);
-            rigid.AddForce(Vector3.down * 2f, ForceMode.Impulse);
+            rigid.AddForce(Vector3.down, ForceMode.Impulse);
         }
         else
         {
