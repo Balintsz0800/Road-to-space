@@ -119,6 +119,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &13645723
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 13645724}
+  m_Layer: 0
+  m_Name: Orientation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &13645724
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13645723}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1806760706}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &59466563
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -295,7 +326,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.013351341, y: -0, z: -0, w: 0.9999109}
-  m_LocalPosition: {x: 0, y: 0.59, z: 0.2}
+  m_LocalPosition: {x: 0, y: 0.59000015, z: 0.20000005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -359,9 +390,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MouseMovement
   mouseSensivity: 150
   playerBody: {fileID: 1806760706}
+  orientation: {fileID: 13645724}
   cameraYOffset: 0.8
-  smoothTime: 10
   xRot: 0
+  yRot: 0
 --- !u!1 &335947000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,6 +1040,7 @@ Transform:
   m_Children:
   - {fileID: 233162631}
   - {fileID: 330585546}
+  - {fileID: 13645724}
   m_Father: {fileID: 1083126220}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1806760707
@@ -1028,6 +1061,7 @@ MonoBehaviour:
   crouchingSpeed: 4
   jumpHeight: 3
   groundCheckDistance: 0.3
+  Orientation: {fileID: 13645724}
   isCrouching: 1
   groundCheck: {fileID: 233162631}
   groundLayer:

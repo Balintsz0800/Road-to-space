@@ -4,13 +4,13 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float playerSpeed;
-    public float walkSpeed = 2f;
-    public float sprintSpeed = 7f;
-    public float crouchingSpeed = 2f;
-    public float jumpHeight = 3f;
-    public float groundCheckDistance = 0.3f;
-    
-    
+    public float walkSpeed;
+    public float sprintSpeed;
+    public float crouchingSpeed;
+    public float jumpHeight;
+    public float groundCheckDistance;
+
+    public Transform Orientation;
     private bool isSprinting = false;
     [HideInInspector] public bool isCrouching = false;
     private bool isGrounded = false;
@@ -68,12 +68,17 @@ public class PlayerMovement : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
         
-        Vector3 inputDirection = (transform.forward * vertical + transform.right * horizontal).normalized;
+        Vector3 inputDirection = (Orientation.forward * vertical + Orientation.right * horizontal).normalized;
         playerSpeed = walkSpeed;
 
         if (Input.GetKey(KeyCode.LeftShift) && !isCrouching)
         {
             playerSpeed = sprintSpeed;
+            isSprinting = true;
+        }
+        else
+        {
+            isSprinting = false;
         }
 
         if (isCrouching)
@@ -82,7 +87,6 @@ public class PlayerMovement : MonoBehaviour
         }
         
         Vector3 targetVelocity = inputDirection * playerSpeed;
-        
         Vector3 velocity = rigid.linearVelocity;
         Vector3 velocityChange = new Vector3(targetVelocity.x - velocity.x, 0, targetVelocity.z - velocity.z);
         
