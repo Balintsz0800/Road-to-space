@@ -12,7 +12,7 @@ public class InventoryManager : MonoBehaviour
 
     void Start()
     {
-        changeSelectedSlot(0);
+        ChangeSelectedSlot(0);
     }
     
     void Update()
@@ -22,12 +22,12 @@ public class InventoryManager : MonoBehaviour
             bool isNumber = int.TryParse(Input.inputString, out int number);
             if (isNumber && number > 0 && number < 9)
             {
-                changeSelectedSlot(number -1);
+                ChangeSelectedSlot(number -1);
             }
         }
     }
     
-    private void changeSelectedSlot(int newValue)
+    void ChangeSelectedSlot(int newValue)
     {
         if (selectedSlot >= 0)
         {
