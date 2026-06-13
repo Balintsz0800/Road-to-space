@@ -2,11 +2,12 @@
 using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
 
+[CreateAssetMenu(menuName = "Items/Item")]
 public class Item : ScriptableObject
     {
         public TileBase tile;
         public itemType type;
-        public InputActionType actionType;
+        public ActionType actionType;
         public Vector2Int range = new Vector2Int(5, 4);
         
         public bool stackable = true;
@@ -21,7 +22,7 @@ public class Item : ScriptableObject
 
         public enum ActionType
         {
-            Mining
+            Mining,
         } 
 
     }
