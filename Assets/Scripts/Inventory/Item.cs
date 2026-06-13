@@ -8,6 +8,8 @@ public class Item : ScriptableObject
         public TileBase tile;
         public itemType type;
         public ActionType actionType;
+        public GameObject itemPrefab;
+        public GameObject handItemPrefab;
         public Vector2Int range = new Vector2Int(5, 4);
         
         public bool stackable = true;
