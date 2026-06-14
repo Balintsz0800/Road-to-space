@@ -11,7 +11,6 @@ public class PlayerMovement : MonoBehaviour
     public float groundCheckDistance;
 
     public Transform Orientation;
-    private bool isSprinting = false;
     [HideInInspector] public bool isCrouching = false;
     private bool isGrounded = false;
 
@@ -74,11 +73,6 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) && !isCrouching)
         {
             playerSpeed = sprintSpeed;
-            isSprinting = true;
-        }
-        else
-        {
-            isSprinting = false;
         }
 
         if (isCrouching)
