@@ -7,12 +7,11 @@ public class InventoryManager : MonoBehaviour
 {
     public int maxStackedItems;
     public GameObject inventoryItemPrefab;
-    public GameObject handItemPrefab;
     public InventorySlot[] slots;
     private int selectedSlot = -1;
-    public Transform handPos;
     public Transform dropPoint;
-    GameObject currentHandItem;
+    public Transform handPos;
+    private GameObject currentHandItem;
 
     void Start()
     {
@@ -34,6 +33,8 @@ public class InventoryManager : MonoBehaviour
         {
             DropSelectedItem();
         }
+        
+        RefreshHandItem();
     }
 
     private void DropSelectedItem()
@@ -63,7 +64,8 @@ public class InventoryManager : MonoBehaviour
         Debug.Log(invItem);
         Debug.Log(invItem.item);
         Debug.Log(dropPoint);
-        ShowHandItem();
+
+        RefreshHandItem();
     }
 
     void ChangeSelectedSlot(int newValue)
@@ -75,26 +77,37 @@ public class InventoryManager : MonoBehaviour
         slots[newValue].Select();
         selectedSlot = newValue;
 
-        ShowHandItem();
+        RefreshHandItem();
     }
 
-    private void ShowHandItem()
+    private void RefreshHandItem()
     {
-        if (currentHandItem)
+        if (currentHandItem != null)
         {
             Destroy(currentHandItem);
+            currentHandItem = null;
         }
         
-        InventoryItem inventoryItem = slots[selectedSlot].GetComponentInChildren<InventoryItem>();
+        InventorySlot slot = slots[selectedSlot];
+        InventoryItem inventoryItem = slot.GetComponentInChildren<InventoryItem>();
 
-        if (inventoryItem == null)
+        if (inventoryItem == null || inventoryItem.item == null || inventoryItem.item.itemPrefab == null)
         {
             return;
         }
+        
+        currentHandItem = Instantiate(inventoryItem.item.itemPrefab, handPos);
+        currentHandItem.transform.localPosition = Vector3.zero;
+        currentHandItem.transform.localRotation = Quaternion.identity;
 
-        if (inventoryItem.item.handItemPrefab)
+        foreach (var rigidBody in currentHandItem.GetComponentsInChildren<Rigidbody>())
         {
-            currentHandItem = Instantiate(inventoryItem.item.handItemPrefab, handPos);
+            rigidBody.isKinematic = true;
+        }
+
+        foreach (var collider in currentHandItem.GetComponentsInChildren<Collider>())
+        {
+            collider.enabled = false;
         }
     }
 
@@ -151,6 +164,7 @@ public class InventoryManager : MonoBehaviour
                 {
                     itemInSlot.RefreshCount();
                 }
+                
                 return item;
             }
         }

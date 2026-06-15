@@ -228,7 +228,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
   maxStackedItems: 5
   inventoryItemPrefab: {fileID: 8965778527580187346, guid: ccdce60ad1538034daad3720df29ed55, type: 3}
-  handItemPrefab: {fileID: 0}
   slots:
   - {fileID: 1356085488}
   - {fileID: 1660591787}
@@ -239,8 +238,8 @@ MonoBehaviour:
   - {fileID: 2136477357}
   - {fileID: 1086819339}
   - {fileID: 2038918604}
-  handPos: {fileID: 1798770407}
   dropPoint: {fileID: 1328380151}
+  handPos: {fileID: 1798770407}
 --- !u!1001 &175731098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2204,7 +2203,7 @@ Transform:
   m_GameObject: {fileID: 1798770406}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.342, y: -0.317, z: 0.026}
+  m_LocalPosition: {x: 0.61, y: -0.317, z: 0.732}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
