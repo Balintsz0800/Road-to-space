@@ -1,17 +1,33 @@
+using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Mineable : MonoBehaviour
 {
     public int health;
-    public int damage;
+    public Tools toolsScript;
+    public Item dropItem; 
+    public int amount = 3;
     
     public void Mine()
     {
-        health -= damage ;
+        InventorySlot slot = InventoryManager.instance.slots[InventoryManager.instance.selectedSlot];
+        InventoryItem invItem = slot.GetComponentInChildren<InventoryItem>();
 
-        if (health <= 0)
+        if (invItem != null && invItem.item.itemtype == Item.ItemType.Tool)
         {
-            Destroy(gameObject);
+            health -= toolsScript.Damage;
         }
+
+        if (health <= 0 && invItem != null && invItem.item.itemtype == Item.ItemType.Tool)
+        {
+            BreakStone();
+        }
+    }
+
+    private void BreakStone()
+    {
+        InventoryManager.instance.AddItem(dropItem, amount);
+        Destroy(gameObject);
     }
 }

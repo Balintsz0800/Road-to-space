@@ -8,16 +8,23 @@ public class InventoryManager : MonoBehaviour
     public int maxStackedItems;
     public GameObject inventoryItemPrefab;
     public InventorySlot[] slots;
-    private int selectedSlot = -1;
+    public int selectedSlot = -1;
     public Transform dropPoint;
     public Transform handPos;
     private GameObject currentHandItem;
 
+    public static InventoryManager instance; 
+    
     void Start()
     {
         ChangeSelectedSlot(0);
     }
-    
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     void Update()
     {
         if (Input.inputString != null)
@@ -28,13 +35,41 @@ public class InventoryManager : MonoBehaviour
                 ChangeSelectedSlot(number -1);
             }
         }
+        
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
+
+        if (scroll != 0f)
+        {
+            int newSlot = selectedSlot;
+
+            if (scroll > 0f)
+            {
+                newSlot++;
+            }
+            else if (scroll < 0f)
+            {
+                newSlot--;
+            }
+
+            if (newSlot >= slots.Length)
+            {
+                newSlot = 0;
+            }
+            else if (newSlot < 0)
+            {
+                newSlot = slots.Length - 1;
+            }
+
+            if (newSlot != selectedSlot)
+            {
+                ChangeSelectedSlot(newSlot);
+            }
+        }
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
             DropSelectedItem();
         }
-        
-        RefreshHandItem();
     }
 
     private void DropSelectedItem()
@@ -54,17 +89,13 @@ public class InventoryManager : MonoBehaviour
 
         if (invItem.count <= 0)
         {
+            invItem.transform.SetParent(null);
             Destroy(invItem.gameObject);
         }
         else
         {
             invItem.RefreshCount();
         }
-        Debug.Log(selectedSlot);
-        Debug.Log(invItem);
-        Debug.Log(invItem.item);
-        Debug.Log(dropPoint);
-
         RefreshHandItem();
     }
 
@@ -80,7 +111,7 @@ public class InventoryManager : MonoBehaviour
         RefreshHandItem();
     }
 
-    private void RefreshHandItem()
+    public void RefreshHandItem()
     {
         if (currentHandItem != null)
         {
@@ -91,12 +122,12 @@ public class InventoryManager : MonoBehaviour
         InventorySlot slot = slots[selectedSlot];
         InventoryItem inventoryItem = slot.GetComponentInChildren<InventoryItem>();
 
-        if (inventoryItem == null || inventoryItem.item == null || inventoryItem.item.itemPrefab == null)
+        if (inventoryItem == null || inventoryItem.item == null || inventoryItem.item.handPrefab == null)
         {
             return;
         }
         
-        currentHandItem = Instantiate(inventoryItem.item.itemPrefab, handPos);
+        currentHandItem = Instantiate(inventoryItem.item.handPrefab, handPos);
         currentHandItem.transform.localPosition = Vector3.zero;
         currentHandItem.transform.localRotation = Quaternion.identity;
 
@@ -111,39 +142,58 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public bool AddItem(Item item)
+    public bool AddItem(Item item, int amount)
     {
-        for (int i = 0; i < slots.Length; i++)
+        if (item.stackable)
         {
-            InventorySlot slot = slots[i];
-            InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
-
-            if (itemInSlot != null && itemInSlot.item == item && item.stackable && itemInSlot.count < maxStackedItems)
+            for (int i = 0; i < slots.Length; i++)
             {
-                itemInSlot.count++;
-                itemInSlot.RefreshCount();
-                return true;
+                InventorySlot slot = slots[i];
+                InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
+
+                if (itemInSlot != null && itemInSlot.item == item&& itemInSlot.count < maxStackedItems)
+                {
+                    itemInSlot.count += amount;
+                    itemInSlot.RefreshCount();
+                    return true;
+                }
             }
         }
+
+        for (int x = 0; x < amount; x++)
+        {
+            bool placed = false;
+            
+            for (int i = 0; i < slots.Length; i++)
+            {
+                InventorySlot slot = slots[i];
+
+                if (slot.GetComponentInChildren<InventoryItem>() == null)
+                {
+                    SpawnNewItem(item, slot, 1);
+                    placed = true; 
+                    break;
+                }
+            }
+
+            if (!placed)
+            {
+                return false;
+            }
+        }
+        RefreshHandItem();
         
-        for (int i = 0; i < slots.Length; i++)
-        {
-            InventorySlot slot = slots[i];
-
-            if (slot.GetComponentInChildren<InventoryItem>() == null)
-            {
-                SpawnNewItem(item, slot);
-                return true;
-            }
-        }
-        return false;
+        return true;
     }
 
-    private void SpawnNewItem(Item item, InventorySlot slot)
+    private void SpawnNewItem(Item item, InventorySlot slot, int amount)
     {
         GameObject newItem = Instantiate(inventoryItemPrefab, slot.transform);
         InventoryItem inventoryItem = newItem.GetComponent<InventoryItem>();
         inventoryItem.IniTaliseItem(item);
+        
+        inventoryItem.count = amount;
+        inventoryItem.RefreshCount();
     }
 
     public Item GetSelectedItem(bool use)
@@ -159,10 +209,13 @@ public class InventoryManager : MonoBehaviour
                 if (itemInSlot.count <= 0)
                 {
                     Destroy(itemInSlot.gameObject);
+                    RefreshHandItem();
                 }
                 else
                 {
                     itemInSlot.RefreshCount();
+                    
+                    RefreshHandItem();
                 }
                 
                 return item;
@@ -170,4 +223,5 @@ public class InventoryManager : MonoBehaviour
         }
         return null;
     }
+
 }

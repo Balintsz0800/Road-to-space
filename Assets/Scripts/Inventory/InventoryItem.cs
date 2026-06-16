@@ -15,11 +15,13 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public Item item;
     [HideInInspector] public int count = 1;
     [HideInInspector] public Transform parentAfterDrag;
+    public int currentDurability;
 
     public void IniTaliseItem(Item newItem)
     {
         item = newItem;
         image.sprite = newItem.image;
+        currentDurability = item.durability;
         RefreshCount();
     }
 

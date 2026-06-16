@@ -10,8 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6650904825221574547}
   - component: {fileID: 6470847464064908277}
-  - component: {fileID: 3257809758520230094}
-  - component: {fileID: 2112132962552599398}
+  - component: {fileID: 4332448944457262460}
   m_Layer: 0
   m_Name: RockWorld
   m_TagString: Untagged
@@ -48,7 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldItem
   item: {fileID: 11400000, guid: fa234256d0bcf394eaa40657ee720be0, type: 2}
---- !u!54 &3257809758520230094
+  amount: 1
+--- !u!54 &4332448944457262460
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -73,31 +73,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &2112132962552599398
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4971784454382659739}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 2.6581023
-  m_Height: 5.316205
-  m_Direction: 1
-  m_Center: {x: 0.055584613, y: 0.0000000014778287, z: 1.1650149e-10}
 --- !u!1 &7502615889884337550
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,6 +87,7 @@ GameObject:
   - component: {fileID: 5834589266568639026}
   - component: {fileID: 8222566526059514205}
   - component: {fileID: 6057689243918259963}
+  - component: {fileID: 7929854373974905395}
   m_Layer: 0
   m_Name: default
   m_TagString: Untagged
@@ -201,3 +179,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldItem
   item: {fileID: 11400000, guid: fa234256d0bcf394eaa40657ee720be0, type: 2}
+  amount: 1
+--- !u!64 &7929854373974905395
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7502615889884337550}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: 9dde15f8c0977214bbed3aaf230acfd4, type: 3}

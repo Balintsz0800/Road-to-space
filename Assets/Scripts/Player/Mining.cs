@@ -7,6 +7,9 @@ public class Mining : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        InventorySlot slot = InventoryManager.instance.slots[InventoryManager.instance.selectedSlot];
+        InventoryItem invItem = slot.GetComponentInChildren<InventoryItem>();
+        
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
