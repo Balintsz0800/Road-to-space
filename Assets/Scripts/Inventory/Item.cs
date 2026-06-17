@@ -23,6 +23,7 @@ public class Item : ScriptableObject
             Iron,
             Fuel,
             Tool,
-            BuildingPart
+            BuildingPart,
+            Workbanch
         }
     }
