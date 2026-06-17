@@ -67,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
         
-        Vector3 inputDirection = (Orientation.forward * vertical + Orientation.right * horizontal).normalized;
+        Vector3 inputDirection = (Orientation.forward * vertical + Orientation.right * horizontal);
         playerSpeed = walkSpeed;
 
         if (Input.GetKey(KeyCode.LeftShift) && !isCrouching)

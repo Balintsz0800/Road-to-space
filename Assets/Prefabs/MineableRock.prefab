@@ -158,6 +158,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Mineable
   health: 5
-  toolsScript: {fileID: 4101261554223957494, guid: 05743c29d1b14dd4db83c5b0ce824897, type: 3}
+  toolsScript: {fileID: -6411990732619818647, guid: 1d6ae5fb5b915924ea1bc67747ca7e0a, type: 3}
   dropItem: {fileID: 11400000, guid: fa234256d0bcf394eaa40657ee720be0, type: 2}
   amount: 3

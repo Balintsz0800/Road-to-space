@@ -6,10 +6,13 @@ using UnityEngine.Tilemaps;
 public class Item : ScriptableObject
     {
         public ItemType itemtype;
-        public ActionType actionType;
         public GameObject itemPrefab;
         public GameObject handPrefab;
         public int durability;
+        
+        public Vector3 handPosition;
+        public Vector3 handRotation;
+        public Vector3 handScale = Vector3.one;
         
         public bool stackable = true;
         public Sprite image;
@@ -22,10 +25,4 @@ public class Item : ScriptableObject
             Tool,
             BuildingPart
         }
-
-        public enum ActionType
-        {
-            Mining,
-        } 
-
     }

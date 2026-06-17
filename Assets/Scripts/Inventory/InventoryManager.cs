@@ -128,8 +128,9 @@ public class InventoryManager : MonoBehaviour
         }
         
         currentHandItem = Instantiate(inventoryItem.item.handPrefab, handPos);
-        currentHandItem.transform.localPosition = Vector3.zero;
-        currentHandItem.transform.localRotation = Quaternion.identity;
+        currentHandItem.transform.localPosition = inventoryItem.item.handPosition;
+        currentHandItem.transform.localRotation = Quaternion.Euler(inventoryItem.item.handRotation);
+        currentHandItem.transform.localScale = inventoryItem.item.handScale;
 
         foreach (var rigidBody in currentHandItem.GetComponentsInChildren<Rigidbody>())
         {
@@ -148,41 +149,49 @@ public class InventoryManager : MonoBehaviour
         {
             for (int i = 0; i < slots.Length; i++)
             {
-                InventorySlot slot = slots[i];
-                InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
+                InventoryItem existing = slots[i].GetComponentInChildren<InventoryItem>();
 
-                if (itemInSlot != null && itemInSlot.item == item&& itemInSlot.count < maxStackedItems)
+                if (existing != null && existing.item == item && existing.count < maxStackedItems)
                 {
-                    itemInSlot.count += amount;
-                    itemInSlot.RefreshCount();
+                    existing.count += amount;
+                    existing.RefreshCount();
+                    RefreshHandItem();
                     return true;
                 }
             }
+
+            for (int i = 0; i < slots.Length; i++)
+            {
+                if (slots[i].GetComponentInChildren<InventoryItem>() == null)
+                {
+                    SpawnNewItem(item, slots[i], amount
+                    );
+                    RefreshHandItem();
+                    return true;
+                }
+            }
+            return false;
         }
 
         for (int x = 0; x < amount; x++)
         {
             bool placed = false;
-            
+
             for (int i = 0; i < slots.Length; i++)
             {
-                InventorySlot slot = slots[i];
-
-                if (slot.GetComponentInChildren<InventoryItem>() == null)
+                if (slots[i].GetComponentInChildren<InventoryItem>() == null)
                 {
-                    SpawnNewItem(item, slot, 1);
-                    placed = true; 
+                    SpawnNewItem(item, slots[i], 1);
+                    placed = true;
                     break;
                 }
             }
-
             if (!placed)
             {
                 return false;
             }
         }
         RefreshHandItem();
-        
         return true;
     }
 
@@ -208,20 +217,18 @@ public class InventoryManager : MonoBehaviour
                 itemInSlot.count--;
                 if (itemInSlot.count <= 0)
                 {
+                    itemInSlot.transform.SetParent(null);
                     Destroy(itemInSlot.gameObject);
                     RefreshHandItem();
                 }
                 else
                 {
                     itemInSlot.RefreshCount();
-                    
                     RefreshHandItem();
                 }
-                
                 return item;
             }
         }
         return null;
     }
-
 }

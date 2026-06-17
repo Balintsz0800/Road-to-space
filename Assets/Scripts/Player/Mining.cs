@@ -21,6 +21,7 @@ public class Mining : MonoBehaviour
                 if (mineable != null)
                 {
                     mineable.Mine();
+                    invItem.currentDurability--;
                 }
             }
             

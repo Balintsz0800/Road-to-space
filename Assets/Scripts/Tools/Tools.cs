@@ -15,7 +15,6 @@ public class Tools : MonoBehaviour
 
     private void UseTool()
     {
-        Debug.Log("UseTool");
         if (InventoryManager.instance.selectedSlot < 0 ||
             InventoryManager.instance.selectedSlot >= InventoryManager.instance.slots.Length)
         {
@@ -29,8 +28,6 @@ public class Tools : MonoBehaviour
         {
             return;
         }
-
-        inventoryItem.currentDurability--;
         Debug.Log( "Durability: " + inventoryItem.currentDurability );
         
         if (inventoryItem.currentDurability <= 0)

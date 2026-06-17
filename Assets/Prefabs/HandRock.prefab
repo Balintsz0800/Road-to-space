@@ -136,7 +136,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1187870130189917960}
-  - component: {fileID: 4101261554223957494}
   m_Layer: 0
   m_Name: HandRock
   m_TagString: Untagged
@@ -160,26 +159,3 @@ Transform:
   - {fileID: 3748629628089171530}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -35.92, y: 0, z: -15}
---- !u!114 &4101261554223957494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1272979616597178845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ee73450858512d4d97d57ced7ef35eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Tools
-  Damage: 2
-  slots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  item: {fileID: 11400000, guid: fa234256d0bcf394eaa40657ee720be0, type: 2}
