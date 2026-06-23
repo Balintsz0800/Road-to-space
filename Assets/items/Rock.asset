@@ -19,5 +19,5 @@ MonoBehaviour:
   handPosition: {x: -0.1, y: 0.03, z: 0}
   handRotation: {x: -35.92, y: 0, z: -15}
   handScale: {x: 0.05, y: 0.05, z: 0.05}
-  stackable: 0
+  stackable: 1
   image: {fileID: 21300000, guid: ed2c74c6cb90c8b43bce0f8e9672cb25, type: 3}
