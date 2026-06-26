@@ -1,13 +1,15 @@
 using System;
 using System.Collections.Generic;
+using TreeEditor;
 using UnityEngine;
 using Random = System.Random;
 
 public class TerrainGenerator : MonoBehaviour
 {
+    [Serializable]
     public class SpawnRule
     {
-        public string groupName = "Rock";
+        public string label = "Rock";
         public GameObject prefab;
 
         [Min(0)] public int count = 100;
@@ -17,7 +19,7 @@ public class TerrainGenerator : MonoBehaviour
         [UnityEngine.Range(0f, 90f)] public float maxSlope = 35f;
         
         public bool alignToGround = true;
-        public float YOffset = 0f;
+        public float yOffset = 0f;
         public Vector2 scaleRange = new Vector2(0.85f, 1.2f);
         
         [Min(1)] public int triesPerObject = 1;
@@ -29,7 +31,7 @@ public class TerrainGenerator : MonoBehaviour
         public float radius;
         public float height;
         public float noiseX;
-        public float noiseY;
+        public float noiseZ;
     }
         
     public bool randomSeedOnStart = true;
@@ -65,7 +67,7 @@ public class TerrainGenerator : MonoBehaviour
     public Vector2 mountainHeightRange = new Vector2(20f, 40f);
         
     [Range(1.1f, 3)] public float foothillRadiusMultiplier = 1.8f;
-    [Range(0.05f, 0.7f)] public float foothillHeightMultiplier = 0.4f;
+    [Range(0.05f, 0.7f)] public float foothillHeightPercent = 0.4f;
     [Range(0.1f, 0.6f)] public float mountainTopRadiusPercent = 0.4f;
     [Range(0f, 0.4f)] public float mountainIrregularity = 0.12f;
 
@@ -76,7 +78,7 @@ public class TerrainGenerator : MonoBehaviour
     public string playerSpawnName = "PlayerSpawn";
         
     public SpawnRule[] spawnRules;
-    private System.Random random;
+    private Random random;
     private TerrainData terrainData;
     private float[,] heights;
     private Vector2 garagePos;
@@ -106,7 +108,7 @@ public class TerrainGenerator : MonoBehaviour
             seed = Environment.TickCount;
         }
             
-        random =  new System.Random(seed);
+        random =  new Random(seed);
         terrainData = terrain.terrainData;
         terrainData.size = new Vector3(mapWidth, mapHeight, mapLength);
 
@@ -122,8 +124,19 @@ public class TerrainGenerator : MonoBehaviour
 
         GenerateMountains();
 
-        heights = GeneratedHeights();
+        heights = GenerateHeights();
         FlattenGarage();
+        
+        terrainData.SetHeights(0, 0, heights);
+        terrain.Flush();
+
+        if (terrainVisualGenerator != null)
+        {
+            //terrainVisualGenerator.GenerateVisuals(terrain, seed);
+        }
+        
+        SpawnGarage();
+        SpawnResources();
             
         Physics.SyncTransforms();
     }
@@ -192,22 +205,363 @@ public class TerrainGenerator : MonoBehaviour
     }
     
     private void GenerateMountains()
-    {
-        
+    { 
+        mountains.Clear();
+
+        if (!generateMountains)
+        {
+            return;
+        }
+
+        for (int i = 0; i < mountainCount; i++)
+        {
+            bool placed = true;
+
+            for (int attempt = 0; attempt < 120; attempt++)
+            {
+                float radius = RandomFloat(mountainRadiusRange.x, mountainRadiusRange.y);
+
+                float outerRadius = radius * foothillHeightPercent;
+                
+                Vector2 pos = RandomPoint(mountainDistanceFromEdge);
+
+                if (!CanPlaceMountain(pos, radius, outerRadius))
+                {
+                    continue;
+                }
+                
+                mountains.Add(new Mountain{pos = pos, radius = radius, height = RandomFloat(mountainHeightRange.x, mountainHeightRange.y), noiseX = RandomFloat(0f, 10000f),  noiseZ = RandomFloat(0f, 10000f) });
+
+                placed = true;
+                break;
+            }
+        }
     }
 
-    private float RandomFloat(float f, float f1)
+    private bool CanPlaceMountain(Vector2 pos, float radius, float outerRadius)
     {
-        throw new NotImplementedException();
+        float garageSafeDistance = mountainDistanceFromGarage + garageFlatRadius + outerRadius;
+
+        if (Vector2.Distance(pos, garagePos) < garageSafeDistance)
+        {
+            return false;
+        }
+
+        foreach (Mountain mountain in mountains)
+        {
+            float minDistance = (radius + mountain.radius) * 0.55f;
+            
+            if (Vector2.Distance(pos, mountain.pos) < minDistance)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private float RandomFloat(float min, float max)
+    {
+        if (max < min)
+        {
+            float temp = min;
+            min = max;
+            max = temp;
+        }
+        return min + (float)random.NextDouble() * (max - min);
     }
         
     private void FlattenGarage()
     {
-        throw new NotImplementedException();
+        int resolution = terrainData.heightmapResolution;
+        int centerX = Mathf.RoundToInt(garagePos.x / mapWidth * (resolution - 1));
+        int centerZ = Mathf.RoundToInt(garagePos.y / mapLength * (resolution - 1));
+        float flatHeight = heights[centerZ,  centerX];
+        float totalRadius = garageFlatRadius + garageBlendRadius;
+        
+        int rangeX = Mathf.CeilToInt(totalRadius / mapWidth * (resolution - 1));
+        int rangeZ = Mathf.CeilToInt(totalRadius / mapLength * (resolution - 1));
+
+        for (int z = centerZ - rangeZ; z <= centerZ + rangeZ; z++)
+        {
+            for (int x = centerX - rangeX; x <= centerX + rangeX; x++)
+            {
+                if (x < 0 || x >= resolution || z < 0 || z >= resolution)
+                {
+                    continue;
+                }
+                
+                Vector2 point = new Vector2(x / (float)(resolution - 1) * mapWidth, z / (float)(resolution - 1) * mapLength);
+                float distance = Vector2.Distance(point, garagePos);
+
+                if (distance > totalRadius)
+                {
+                    continue;
+                }
+
+                if (distance <= garageFlatRadius)
+                {
+                    heights[z, x] = flatHeight;
+                }
+                else
+                {
+                    float blend = Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(garageFlatRadius, totalRadius, distance));
+                    heights[z, x] = Mathf.Lerp(flatHeight, heights[z, x], blend);
+                }
+            }
+        }
     }
 
-    private float[,] GeneratedHeights()
+    private float[,] GenerateHeights()
     {
-        throw new NotImplementedException();
+        int resolution = terrainData.heightmapResolution;
+
+        float[,] result = new float[resolution, resolution];
+
+        for (int z = 0; z < resolution; z++)
+        {
+            for (int x = 0; x < resolution; x++)
+            {
+                float u = x / (float)(resolution - 1);
+                float v = z / (float)(resolution - 1);
+                
+                Vector2 point = new Vector2(u * mapWidth, v * mapLength);
+
+                float mountainHeight = GetMountainHeight(point, out float flatTop);
+                float height = baseHeight + GetHillHeight(u, v) + mountainHeight;
+
+                if (flatTop < 0)
+                {
+                    height = Mathf.Lerp(height, baseHeight + mountainHeight, flatTop);
+                }
+                result[z, x] = Mathf.Clamp01(height / mapHeight);
+            }
+        }
+        return result;
+    }
+
+    private float GetHillHeight(float u, float v)
+    {
+        float bigHills = FractalNoise(u, v, hillX, hillZ, hillFrequency, hillOctaves, hillPersistence, hillLacunarity);
+        float details = Mathf.PerlinNoise(detailX + u * detailFrequency, detailZ + v * detailFrequency);
+
+        return (bigHills - 0.5f) * 2f * hillAmplitude + (details - 0.5f) * 2f * detailAmplitude;
+    }
+
+    private float GetMountainHeight(Vector2 point, out float flatTop)
+    {
+        float totalHeight = 0f;
+        flatTop = 0f;
+
+        foreach (Mountain mountain in mountains)
+        {
+            float outerRadius = mountain.radius * foothillRadiusMultiplier;
+            float topRadius = Mathf.Max(5f, mountain.radius * mountainTopRadiusPercent);
+            float distance = Vector2.Distance(point, mountain.pos);
+
+            if (distance >= outerRadius) continue;
+
+            float foothillShape = Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(outerRadius, mountain.radius, distance));
+            float height = mountain.height * foothillHeightPercent * foothillShape;
+
+            if (distance < mountain.radius)
+            {
+                float coreShape = distance <= topRadius ? 1f : Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(mountain.radius, topRadius, distance));
+
+                float slopeNoise = FractalNoise(point.x / mountain.radius, point.y / mountain.radius, mountain.noiseX, mountain.noiseZ, 3f, 3, 0.5f, 2f);
+                float slopeBlend = Mathf.InverseLerp(topRadius, mountain.radius, distance);
+
+                float noisyScale = Mathf.Lerp(1f - mountainIrregularity, 1f + mountainIrregularity, slopeNoise);
+                float scale = Mathf.Lerp(1f, noisyScale, slopeBlend);
+
+                height += mountain.height * (1f - foothillHeightPercent) * coreShape * scale;
+            }
+
+            totalHeight += height;
+
+            if (distance <= topRadius)
+            {
+                flatTop = 1f;
+            }
+            else
+            {
+                float blendEnd = topRadius + mountain.radius * 0.15f;
+
+                if (distance < blendEnd)
+                {
+                    float blend = 1f - Mathf.InverseLerp(topRadius, blendEnd, distance);
+                    flatTop = Mathf.Max(flatTop, Mathf.SmoothStep(0f, 1f, blend));
+                }
+            }
+        }
+        return totalHeight;
+    }
+
+    private float FractalNoise(float x, float z, float offsetX, float offsetZ, float frequency, int octaves, float persistence, float lacunarity)
+    {
+        float total = 0f;
+        float strength = 1f;
+        float max = 0f;
+
+        for (int i = 0; i < octaves; i++)
+        {
+            total += Mathf.PerlinNoise(offsetX + x * frequency, offsetZ + z * frequency) * strength;
+
+            max += strength;
+            strength *= persistence;
+            frequency *= lacunarity;
+        }
+        return total / max;
+    }
+
+    private void SpawnGarage()
+    {
+        Vector3 pos = GetWorldPosition(garagePos.x, garagePos.y, garageYOffset);
+        Quaternion rotation = Quaternion.Euler(0f, RandomFloat(0f, 360f), 0f);
+
+        GameObject garage = Instantiate(garagePrefab, pos, rotation, CreateGroup("Garage"));
+        Transform spawnPoint = FindChild(garage.transform, playerSpawnName);
+
+        if (spawnPoint != null)
+        {
+            MovePlayer(spawnPoint.position);
+            return;
+        }
+
+        MovePlayer(garage.transform.position + garage.transform.forward * 5f + Vector3.up * 2f);
+    }
+
+    private Transform FindChild(Transform parent, string targetName)
+    {
+        foreach (Transform child in parent)
+        {
+            if (child.name == targetName)
+            {
+                return child;
+            }
+
+            Transform found = FindChild(child, targetName);
+
+            if (found != null)
+            {
+                return found;
+            }
+        }
+        return null;
+    }
+
+    private void MovePlayer(Vector3 pos)
+    {
+        Rigidbody rb = player.GetComponent<Rigidbody>();
+
+        if (rb == null)
+        {
+            player.position = pos;
+            return;
+        }
+
+        rb.position = pos;
+        rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+    }
+
+    private Transform CreateGroup(string name)
+    {
+        GameObject group = new GameObject(name);
+        group.transform.SetParent(generatedRoot);
+
+        return group.transform;
+    }
+
+    private Vector3 GetWorldPosition(float x, float z, float yOffset)
+    {
+        float u = x / mapWidth;
+        float v = z / mapLength;
+        float groundHeight = terrainData.GetInterpolatedHeight(u, v);
+
+        return new Vector3(terrain.transform.position.x + x, terrain.transform.position.y + groundHeight + yOffset, terrain.transform.position.z + z);
+    }
+
+    private void SpawnResources()
+    {
+        if (spawnRules == null)
+        {
+            return;
+        }
+
+        foreach (SpawnRule rule in spawnRules)
+        {
+            if (rule.prefab == null || rule.count <= 0)
+            {
+                continue;
+            }
+
+            Transform group = CreateGroup(rule.label);
+            List<Vector2> placed = new List<Vector2>();
+
+            for (int i = 0; i < rule.count; i++)
+            {
+                if (!TryFindResource(rule, placed, out Vector3 pos, out Quaternion rotation, out Vector2 localPos))
+                {
+                    continue;    
+                }
+
+                GameObject obj = Instantiate(rule.prefab, pos, rotation, group);
+                obj.transform.localScale *= RandomFloat(rule.scaleRange.x, rule.scaleRange.y);
+
+                placed.Add(localPos);
+            }
+        }
+    }
+
+    private bool TryFindResource(SpawnRule rule, List<Vector2> placed, out Vector3 worldPos, out Quaternion rotation, out Vector2 localPos)
+    {
+        for (int i = 0; i < rule.triesPerObject; i++)
+        {
+            Vector2 point = RandomPoint(rule.edgeDistance);
+
+            if (Vector2.Distance(point, garagePos) < rule.minGarageDistance)
+            {
+                continue;
+            }
+
+            bool tooClose = false;
+
+            foreach (Vector2 other in placed)
+            {
+                if (Vector2.Distance(point, other) >= rule.minObjectDistance)
+                {
+                    continue;
+                }
+
+                tooClose = true;
+                break;
+            }
+
+            if (tooClose) continue;
+
+            float u = point.x / mapWidth;
+            float v = point.y / mapLength;
+
+            Vector3 normal = terrainData.GetInterpolatedNormal(u, v);
+
+            if (Vector3.Angle(normal, Vector3.up) > rule.maxSlope)
+            {
+                continue;
+            }
+
+            worldPos = GetWorldPosition(point.x, point.y, rule.yOffset);
+
+            Quaternion yaw = Quaternion.Euler(0f, RandomFloat(0f, 360f), 0f);
+            rotation = rule.alignToGround ? Quaternion.FromToRotation(Vector3.up, normal) * yaw : yaw;
+
+            localPos = point;
+            return true;
+        }
+
+        worldPos = Vector3.zero;
+        rotation = Quaternion.identity;
+        localPos = Vector2.zero;
+
+        return false;
     }
 }
