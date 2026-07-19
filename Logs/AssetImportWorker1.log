@@ -1,9 +1,9 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
 Built from '6000.2/staging' branch; Version is '6000.2.12f1 (e89d5df0e333) revision 15244637'; Using compiler version '194234433'; Build Type 'Release'
 OS: 'Windows 11  (10.0.26100) 64bit IoTEnterpriseS' Language: 'hu' Physical Memory: 16326 MB
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Balint" at "2026-07-19T18:35:24.991485Z"
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Balint" at "2026-06-26T13:16:36.6626805Z"
-Date: 2026-06-26T13:16:36Z
+Date: 2026-07-19T18:35:24Z
 
 COMMAND LINE ARGUMENTS:
 D:\Unity\6000.2.12f1\Editor\Unity.exe
@@ -17,7 +17,7 @@ D:/Road to space
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-61952
+61406
 -licensingIpc
 LicenseClient-Balint
 -job-worker-count
@@ -65,12 +65,14 @@ D:/Road to space
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [20660]  Target information:
+Player connection [11676]  Target information:
 
-Player connection [20660]  * "[IP] 192.168.0.15 [Port] 0 [Flags] 2 [Guid] 3205629414 [EditorId] 3205629414 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-81Q28MI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [11676]  * "[IP] 192.168.0.21 [Port] 0 [Flags] 2 [Guid] 1409765963 [EditorId] 1409765963 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-81Q28MI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [20660] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [20660] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [11676]  * "[IP] 172.29.96.1 [Port] 0 [Flags] 2 [Guid] 1409765963 [EditorId] 1409765963 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-81Q28MI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [11676] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [11676] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 3
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -82,7 +84,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 5.52 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 4.16 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.2.12f1 (e89d5df0e333)
 [Subsystems] Discovering subsystems at path D:/Unity/6000.2.12f1/Editor/Data/Resources/UnitySubsystems
@@ -98,69 +100,67 @@ Initialize mono
 Mono path[0] = 'D:/Unity/6000.2.12f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/6000.2.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/Unity/6000.2.12f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56948
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56236
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/6000.2.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003414 seconds.
-- Loaded All Assemblies, in  1.027 seconds
+Registered in 0.003627 seconds.
+- Loaded All Assemblies, in  0.894 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.993 seconds
-Domain Reload Profiling: 2019ms
-	BeginReloadAssembly (289ms)
+- Finished resetting the current domain, in  0.883 seconds
+Domain Reload Profiling: 1784ms
+	BeginReloadAssembly (233ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (110ms)
-	RebuildNativeTypeToScriptingClass (109ms)
-	initialDomainReloadingComplete (133ms)
-	LoadAllAssembliesAndSetupDomain (384ms)
-		LoadAssemblies (287ms)
+		CreateAndSetChildDomain (2ms)
+	RebuildCommonClasses (72ms)
+	RebuildNativeTypeToScriptingClass (58ms)
+	initialDomainReloadingComplete (107ms)
+	LoadAllAssembliesAndSetupDomain (421ms)
+		LoadAssemblies (231ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (377ms)
-			TypeCache.Refresh (375ms)
-				TypeCache.ScanAssembly (351ms)
+		AnalyzeDomain (412ms)
+			TypeCache.Refresh (409ms)
+				TypeCache.ScanAssembly (377ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (994ms)
+	FinalizeReload (892ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (883ms)
+		SetupLoadedEditorAssemblies (735ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (87ms)
+			InitializePlatformSupportModulesInManaged (96ms)
 			SetLoadedEditorAssemblies (7ms)
-			BeforeProcessingInitializeOnLoad (171ms)
-			ProcessInitializeOnLoadAttributes (437ms)
-			ProcessInitializeOnLoadMethodAttributes (180ms)
+			BeforeProcessingInitializeOnLoad (134ms)
+			ProcessInitializeOnLoadAttributes (364ms)
+			ProcessInitializeOnLoadMethodAttributes (134ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (0ms)
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.17.4+4293ba1
+  Session Id:              78ccaba957d247a687d97c4c5f7535f6
+  Correlation Id:          6da798034897e39bf6cbb78c7e1b83b1
+  External correlation Id: 7003399977610412052
+  Machine Id:              BO9ILETdmIkPD3LAVbia6TFr59M=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Balint" (connect: 0.00s, validation: 0.00s, handshake: 3.88s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Balint-notifications" at "2026-07-19T18:35:28.8723307Z"
+[Licensing::Module] Licensing Background thread has ended after 3.88s
 ========================================================================
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
-[Licensing::Module] Licensing is not yet initialized.
-[Licensing::Client] Handshaking with LicensingClient:
-  Version:                 1.17.4+4293ba1
-  Session Id:              b9b50f0e0824418492180969f4ae5f05
-  Correlation Id:          c5fd00169902224eef6e31c66291f448
-  External correlation Id: 378816544633891918
-  Machine Id:              BO9ILETdmIkPD3LAVbia6TFr59M=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Balint" (connect: 0.00s, validation: 0.00s, handshake: 8.09s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Balint-notifications" at "2026-06-26T13:16:44.7550297Z"
-[Licensing::Module] Licensing Background thread has ended after 8.09s
-[Licensing::Module] Licensing is initialized (took 3.92s).
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Module] License group:
   Id: 7972442677409-UnityPersXXXX
   Product: Unity Personal
   Type: Assigned
   Expiration: Unlimited
-- Loaded All Assemblies, in  6.062 seconds
+- Loaded All Assemblies, in  2.051 seconds
 Refreshing native plugins compatible for Editor in 1.06 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
@@ -168,717 +168,147 @@ Package Manager log level set to [2]
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.562 seconds
-Domain Reload Profiling: 8621ms
-	BeginReloadAssembly (4375ms)
+- Finished resetting the current domain, in  1.927 seconds
+Domain Reload Profiling: 3975ms
+	BeginReloadAssembly (309ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (15ms)
+		DisableScriptedObjects (9ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (72ms)
-	RebuildCommonClasses (64ms)
-	RebuildNativeTypeToScriptingClass (23ms)
-	initialDomainReloadingComplete (57ms)
-	LoadAllAssembliesAndSetupDomain (1540ms)
-		LoadAssemblies (1192ms)
+		CreateAndSetChildDomain (45ms)
+	RebuildCommonClasses (66ms)
+	RebuildNativeTypeToScriptingClass (24ms)
+	initialDomainReloadingComplete (54ms)
+	LoadAllAssembliesAndSetupDomain (1595ms)
+		LoadAssemblies (1012ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (614ms)
-			TypeCache.Refresh (503ms)
-				TypeCache.ScanAssembly (469ms)
-			BuildScriptInfoCaches (89ms)
-			ResolveRequiredComponents (16ms)
-	FinalizeReload (2562ms)
+		AnalyzeDomain (736ms)
+			TypeCache.Refresh (588ms)
+				TypeCache.ScanAssembly (545ms)
+			BuildScriptInfoCaches (121ms)
+			ResolveRequiredComponents (20ms)
+	FinalizeReload (1927ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1264ms)
+		SetupLoadedEditorAssemblies (922ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (3ms)
-			SetLoadedEditorAssemblies (10ms)
-			BeforeProcessingInitializeOnLoad (325ms)
-			ProcessInitializeOnLoadAttributes (815ms)
-			ProcessInitializeOnLoadMethodAttributes (106ms)
-			AfterProcessingInitializeOnLoad (3ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (10ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 1.82 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6200 unused Assets / (5.1 MB). Loaded Objects now: 6911.
-Memory consumption went from 130.9 MB to 125.8 MB.
-Total: 15.227700 ms (FindLiveObjects: 0.989900 ms CreateObjectMapping: 1.480100 ms MarkObjects: 8.614100 ms  DeleteObjects: 4.140500 ms)
-
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  2.017 seconds
-Refreshing native plugins compatible for Editor in 1.15 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.091 seconds
-Domain Reload Profiling: 3111ms
-	BeginReloadAssembly (932ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (10ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (326ms)
-	RebuildCommonClasses (93ms)
-	RebuildNativeTypeToScriptingClass (22ms)
-	initialDomainReloadingComplete (40ms)
-	LoadAllAssembliesAndSetupDomain (933ms)
-		LoadAssemblies (1083ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (330ms)
-			TypeCache.Refresh (17ms)
-				TypeCache.ScanAssembly (1ms)
-			BuildScriptInfoCaches (291ms)
-			ResolveRequiredComponents (16ms)
-	FinalizeReload (1091ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (860ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (5ms)
-			BeforeProcessingInitializeOnLoad (202ms)
-			ProcessInitializeOnLoadAttributes (543ms)
-			ProcessInitializeOnLoadMethodAttributes (102ms)
-			AfterProcessingInitializeOnLoad (4ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (21ms)
-Refreshing native plugins compatible for Editor in 1.85 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6198 unused Assets / (4.5 MB). Loaded Objects now: 6927.
-Memory consumption went from 135.6 MB to 131.1 MB.
-Total: 12.086400 ms (FindLiveObjects: 1.430400 ms CreateObjectMapping: 1.518200 ms MarkObjects: 6.664500 ms  DeleteObjects: 2.471600 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (3.8 MB). Loaded Objects now: 6927.
-Memory consumption went from 135.8 MB to 131.9 MB.
-Total: 11.992100 ms (FindLiveObjects: 0.825500 ms CreateObjectMapping: 1.464500 ms MarkObjects: 6.106000 ms  DeleteObjects: 3.594900 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-[Licensing::Client] Successfully resolved entitlement details
-- Loaded All Assemblies, in  1.335 seconds
-Refreshing native plugins compatible for Editor in 1.10 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.915 seconds
-Domain Reload Profiling: 2253ms
-	BeginReloadAssembly (541ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (15ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (183ms)
-	RebuildCommonClasses (102ms)
-	RebuildNativeTypeToScriptingClass (34ms)
-	initialDomainReloadingComplete (52ms)
-	LoadAllAssembliesAndSetupDomain (608ms)
-		LoadAssemblies (593ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (280ms)
-			TypeCache.Refresh (13ms)
-				TypeCache.ScanAssembly (1ms)
-			BuildScriptInfoCaches (246ms)
-			ResolveRequiredComponents (15ms)
-	FinalizeReload (915ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (695ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
 			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (157ms)
-			ProcessInitializeOnLoadAttributes (458ms)
-			ProcessInitializeOnLoadMethodAttributes (68ms)
+			BeforeProcessingInitializeOnLoad (217ms)
+			ProcessInitializeOnLoadAttributes (583ms)
+			ProcessInitializeOnLoadMethodAttributes (108ms)
 			AfterProcessingInitializeOnLoad (4ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (20ms)
-Refreshing native plugins compatible for Editor in 1.24 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (11ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.86 seconds
+Refreshing native plugins compatible for Editor in 1.39 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6198 unused Assets / (4.3 MB). Loaded Objects now: 6930.
-Memory consumption went from 135.5 MB to 131.3 MB.
-Total: 10.098800 ms (FindLiveObjects: 0.832000 ms CreateObjectMapping: 1.345900 ms MarkObjects: 4.965500 ms  DeleteObjects: 2.954200 ms)
+Unloading 6200 unused Assets / (4.1 MB). Loaded Objects now: 6914.
+Memory consumption went from 132.5 MB to 128.4 MB.
+Total: 11.887800 ms (FindLiveObjects: 0.850700 ms CreateObjectMapping: 0.762000 ms MarkObjects: 7.176700 ms  DeleteObjects: 3.095300 ms)
 
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 2.68 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (3.4 MB). Loaded Objects now: 6930.
-Memory consumption went from 135.8 MB to 132.3 MB.
-Total: 27.600500 ms (FindLiveObjects: 2.291600 ms CreateObjectMapping: 2.116400 ms MarkObjects: 17.809300 ms  DeleteObjects: 5.381000 ms)
-
-Prepare: number of updated asset objects reloaded= 0
 ========================================================================
 Received Import Request.
-  Time since last request: 197337.764090 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.109693 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/worldgenerating/terraingenerator.cs in SourceAssetDB has modification time of '2026-06-26T13:50:44.6085493Z' while content on disk has modification time of '2026-06-26T13:50:56.3932867Z'
-  ERROR: Build asset version error: assets/scripts/worldgenerating/terraingenerator.cs in SourceAssetDB has modification time of '2026-06-26T13:50:44.6085493Z' while content on disk has modification time of '2026-06-26T13:50:56.3932867Z'
+  Time since last request: 545245.678742 seconds.
+  path: Assets/Scripts/WorldGenerating/TerrainVisualGenerator.cs
+  artifactKey: Guid(c7752781d3e745d44acfebee6ef48398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/WorldGenerating/TerrainVisualGenerator.cs using Guid(c7752781d3e745d44acfebee6ef48398) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4cc1d1d3d5734bac61f9222fbbd348b1') in 0.0521444 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 3.37 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.5 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 132.1 MB.
-Total: 18.165700 ms (FindLiveObjects: 1.624900 ms CreateObjectMapping: 1.562300 ms MarkObjects: 10.436400 ms  DeleteObjects: 4.540300 ms)
+Received Import Request.
+  Time since last request: 131.695014 seconds.
+  path: Assets/Anime Trees/Prefabs/Bush_02.prefab
+  artifactKey: Guid(f5a6a30c04f240d47be03c2ef138333d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Anime Trees/Prefabs/Bush_02.prefab using Guid(f5a6a30c04f240d47be03c2ef138333d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '96584555148e301eb64cd15b56ca7961') in 0.8903461 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 26
 
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 2.15 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.3 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 132.3 MB.
-Total: 595.287100 ms (FindLiveObjects: 74.395400 ms CreateObjectMapping: 404.659900 ms MarkObjects: 105.345500 ms  DeleteObjects: 10.883100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 3.48 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (3.1 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 133.5 MB.
-Total: 31.325000 ms (FindLiveObjects: 1.776500 ms CreateObjectMapping: 1.328500 ms MarkObjects: 22.432200 ms  DeleteObjects: 5.786000 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.37 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (3.8 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 132.7 MB.
-Total: 16.894100 ms (FindLiveObjects: 1.624500 ms CreateObjectMapping: 1.758100 ms MarkObjects: 10.049400 ms  DeleteObjects: 3.460800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.55 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (3.7 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 132.8 MB.
-Total: 13.434500 ms (FindLiveObjects: 0.870300 ms CreateObjectMapping: 2.763300 ms MarkObjects: 6.796200 ms  DeleteObjects: 3.003300 ms)
-
-Prepare: number of updated asset objects reloaded= 0
 ========================================================================
 Received Import Request.
-  Time since last request: 113.823722 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0d316c8b4f99b4789885d3756d8622d1') in 0.0851619 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+  Time since last request: 0.000058 seconds.
+  path: Assets/Anime Trees/Prefabs/Tree_03.prefab
+  artifactKey: Guid(23aeb96941b49fb49befd2058dd75b79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Anime Trees/Prefabs/Tree_03.prefab using Guid(23aeb96941b49fb49befd2058dd75b79) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b920b3878fd33e3907711c397b2fce32') in 0.1000459 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 30
 
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.59 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (6.6 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 130.0 MB.
-Total: 27.411400 ms (FindLiveObjects: 1.558200 ms CreateObjectMapping: 1.660300 ms MarkObjects: 12.575000 ms  DeleteObjects: 11.616000 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 2.46 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.9 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 131.6 MB.
-Total: 18.166600 ms (FindLiveObjects: 1.451200 ms CreateObjectMapping: 1.572300 ms MarkObjects: 9.459500 ms  DeleteObjects: 5.682000 ms)
-
-Prepare: number of updated asset objects reloaded= 0
 ========================================================================
 Received Import Request.
-  Time since last request: 16.574735 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '28cf511e0101c13eba0f680cf0250a1f') in 0.018031 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+  Time since last request: 0.000041 seconds.
+  path: Assets/Anime Trees/Prefabs/GrassMesh.prefab
+  artifactKey: Guid(51b8cd9e64dc867439b7580243c9c6cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Anime Trees/Prefabs/GrassMesh.prefab using Guid(51b8cd9e64dc867439b7580243c9c6cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5bd5c3b65dbb0345c893b0aafda2697e') in 0.0252055 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 14
 
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.86 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.4 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 132.1 MB.
-Total: 18.350500 ms (FindLiveObjects: 1.538800 ms CreateObjectMapping: 1.569700 ms MarkObjects: 11.584100 ms  DeleteObjects: 3.656200 ms)
-
-Prepare: number of updated asset objects reloaded= 0
 ========================================================================
 Received Import Request.
-  Time since last request: 9.121776 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b4e416a8bec8f13a2bed03bd2e3ff690') in 0.0089555 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.56 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.3 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 132.3 MB.
-Total: 15.755300 ms (FindLiveObjects: 1.304200 ms CreateObjectMapping: 1.619100 ms MarkObjects: 7.414200 ms  DeleteObjects: 5.416200 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 2.31 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.4 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 132.1 MB.
-Total: 40.486000 ms (FindLiveObjects: 1.698400 ms CreateObjectMapping: 1.349500 ms MarkObjects: 33.443500 ms  DeleteObjects: 3.993100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.59 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.0 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 132.5 MB.
-Total: 12.260800 ms (FindLiveObjects: 1.922600 ms CreateObjectMapping: 1.328900 ms MarkObjects: 5.687000 ms  DeleteObjects: 3.320800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 36.844679 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'afce9b903c979fb20286bb7a6ad6d7a9') in 0.0554204 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.52 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (3.9 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 132.6 MB.
-Total: 14.955000 ms (FindLiveObjects: 2.179400 ms CreateObjectMapping: 1.503900 ms MarkObjects: 7.702600 ms  DeleteObjects: 3.568000 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.43 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.3 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 132.3 MB.
-Total: 11.350800 ms (FindLiveObjects: 0.863600 ms CreateObjectMapping: 1.374600 ms MarkObjects: 5.860000 ms  DeleteObjects: 3.251300 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.15 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (6.2 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 130.4 MB.
-Total: 20.425100 ms (FindLiveObjects: 0.890800 ms CreateObjectMapping: 1.724800 ms MarkObjects: 10.686300 ms  DeleteObjects: 7.121100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.88 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (3.6 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 132.9 MB.
-Total: 19.784700 ms (FindLiveObjects: 1.119700 ms CreateObjectMapping: 1.524800 ms MarkObjects: 13.215500 ms  DeleteObjects: 3.923500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 27.281586 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '229e696716d329ec7b275f52ed42ba60') in 0.0341514 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.88 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (3.4 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 133.2 MB.
-Total: 11.696100 ms (FindLiveObjects: 0.919100 ms CreateObjectMapping: 1.489200 ms MarkObjects: 6.087400 ms  DeleteObjects: 3.199200 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 6.082214 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'de9c3247c588cb893cff23f627ce6928') in 0.0067327 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 2.06 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.7 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 131.8 MB.
-Total: 18.144100 ms (FindLiveObjects: 1.553900 ms CreateObjectMapping: 1.590200 ms MarkObjects: 10.240900 ms  DeleteObjects: 4.757400 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 3.014861 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e8ff20e44a820342aff29f411bfca88e') in 0.00607 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.69 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (3.2 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 133.4 MB.
-Total: 21.377600 ms (FindLiveObjects: 1.666500 ms CreateObjectMapping: 1.534500 ms MarkObjects: 9.256800 ms  DeleteObjects: 8.918100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 4.115994 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a632e5944b8905a3ba32cd54c76f5476') in 0.0070102 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.85 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.6 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 132.0 MB.
-Total: 16.499500 ms (FindLiveObjects: 1.633000 ms CreateObjectMapping: 1.666000 ms MarkObjects: 9.051800 ms  DeleteObjects: 4.146700 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 9.872879 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4c00ac06f07acc5847ad69f4ad4da96b') in 0.0058345 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.97 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.4 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.6 MB to 132.1 MB.
-Total: 23.938100 ms (FindLiveObjects: 6.145800 ms CreateObjectMapping: 2.019100 ms MarkObjects: 11.119600 ms  DeleteObjects: 4.651600 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.73 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.2 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 132.3 MB.
-Total: 21.036600 ms (FindLiveObjects: 1.445700 ms CreateObjectMapping: 1.568300 ms MarkObjects: 12.452800 ms  DeleteObjects: 5.567900 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 2.80 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.5 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 132.1 MB.
-Total: 22.959800 ms (FindLiveObjects: 1.126400 ms CreateObjectMapping: 1.550000 ms MarkObjects: 14.291900 ms  DeleteObjects: 5.990000 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 11.453810 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '49211b95507437db95c9eab502b9beca') in 0.1185678 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.72 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.5 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 132.0 MB.
-Total: 22.087400 ms (FindLiveObjects: 1.597600 ms CreateObjectMapping: 1.611200 ms MarkObjects: 13.608100 ms  DeleteObjects: 5.268700 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 19.885882 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b00a8580dde0d213e55ab6aff718f027') in 0.0074616 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.94 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (3.9 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 132.6 MB.
-Total: 21.977200 ms (FindLiveObjects: 1.299800 ms CreateObjectMapping: 1.474500 ms MarkObjects: 11.679700 ms  DeleteObjects: 7.521300 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 16.242717 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e67f7eda9c6af874a26ad7e57af7f552') in 0.0117317 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 14.90 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.5 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 132.0 MB.
-Total: 20.040900 ms (FindLiveObjects: 1.784900 ms CreateObjectMapping: 2.760600 ms MarkObjects: 10.408000 ms  DeleteObjects: 5.085300 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 15.713809 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f0b92504244473f0f6738a27de886ad1') in 0.0057062 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.63 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.0 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 132.5 MB.
-Total: 17.903400 ms (FindLiveObjects: 1.006100 ms CreateObjectMapping: 0.987900 ms MarkObjects: 10.832700 ms  DeleteObjects: 5.075100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 10.757806 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cf64041042ed4614cd25fa8ac3c03df8') in 0.0176756 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 6.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (2.4 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 134.2 MB.
-Total: 64.740800 ms (FindLiveObjects: 5.804400 ms CreateObjectMapping: 34.243100 ms MarkObjects: 17.162200 ms  DeleteObjects: 7.529200 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.14 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.4 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 132.1 MB.
-Total: 23.877000 ms (FindLiveObjects: 0.848400 ms CreateObjectMapping: 1.423400 ms MarkObjects: 14.928000 ms  DeleteObjects: 6.675800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 2.23 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (3.6 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.6 MB to 133.0 MB.
-Total: 19.281200 ms (FindLiveObjects: 1.419100 ms CreateObjectMapping: 1.821100 ms MarkObjects: 10.779800 ms  DeleteObjects: 5.259700 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.88 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.7 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 131.8 MB.
-Total: 27.371800 ms (FindLiveObjects: 3.000500 ms CreateObjectMapping: 3.220400 ms MarkObjects: 15.708300 ms  DeleteObjects: 5.441000 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 26.103458 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b6856557f5a10f55ef315e32df215dd1') in 0.0565458 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.49 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (8.0 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 128.5 MB.
-Total: 56.168500 ms (FindLiveObjects: 1.593000 ms CreateObjectMapping: 1.576200 ms MarkObjects: 22.858500 ms  DeleteObjects: 30.138900 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.73 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.3 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 132.2 MB.
-Total: 21.725200 ms (FindLiveObjects: 1.808600 ms CreateObjectMapping: 1.721400 ms MarkObjects: 13.534200 ms  DeleteObjects: 4.659100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.92 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.7 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 131.8 MB.
-Total: 14.168600 ms (FindLiveObjects: 0.874100 ms CreateObjectMapping: 2.094700 ms MarkObjects: 7.281400 ms  DeleteObjects: 3.917300 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.66 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (6.1 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 130.4 MB.
-Total: 29.053800 ms (FindLiveObjects: 3.095200 ms CreateObjectMapping: 2.831200 ms MarkObjects: 14.349800 ms  DeleteObjects: 8.775700 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.72 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.5 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 132.0 MB.
-Total: 14.418900 ms (FindLiveObjects: 1.454300 ms CreateObjectMapping: 1.403000 ms MarkObjects: 7.805900 ms  DeleteObjects: 3.754400 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 2.24 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.2 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 132.3 MB.
-Total: 14.313000 ms (FindLiveObjects: 0.988500 ms CreateObjectMapping: 1.621300 ms MarkObjects: 7.789900 ms  DeleteObjects: 3.912000 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 83.069388 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8cc9af877f71ce54ad426ee9772fb169') in 0.057944 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+  Time since last request: 0.000030 seconds.
+  path: Assets/Anime Trees/Prefabs/Tree_05.prefab
+  artifactKey: Guid(1793f6da575996c40bf5fb4686d1743e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Anime Trees/Prefabs/Tree_05.prefab using Guid(1793f6da575996c40bf5fb4686d1743e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f33843106a4b6e51114f7fe7d2aac665') in 0.0754667 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 30
 
 ========================================================================
 Received Prepare
 Refreshing native plugins compatible for Editor in 2.13 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (5.5 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 131.0 MB.
-Total: 21.526500 ms (FindLiveObjects: 1.499300 ms CreateObjectMapping: 1.747900 ms MarkObjects: 12.767200 ms  DeleteObjects: 5.510100 ms)
+Unloading 6193 unused Assets / (4.5 MB). Loaded Objects now: 7071.
+Memory consumption went from 143.0 MB to 138.5 MB.
+Total: 19.211800 ms (FindLiveObjects: 1.634600 ms CreateObjectMapping: 1.498800 ms MarkObjects: 12.204200 ms  DeleteObjects: 3.872300 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 ========================================================================
 Received Prepare
-Refreshing native plugins compatible for Editor in 1.51 ms, found 3 plugins.
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+- Loaded All Assemblies, in  1.893 seconds
+Refreshing native plugins compatible for Editor in 1.30 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.160 seconds
+Domain Reload Profiling: 3057ms
+	BeginReloadAssembly (789ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (43ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (431ms)
+	RebuildCommonClasses (65ms)
+	RebuildNativeTypeToScriptingClass (20ms)
+	initialDomainReloadingComplete (42ms)
+	LoadAllAssembliesAndSetupDomain (980ms)
+		LoadAssemblies (935ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (263ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (227ms)
+			ResolveRequiredComponents (17ms)
+	FinalizeReload (1161ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (861ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (8ms)
+			BeforeProcessingInitializeOnLoad (180ms)
+			ProcessInitializeOnLoadAttributes (580ms)
+			ProcessInitializeOnLoadMethodAttributes (86ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (21ms)
+Refreshing native plugins compatible for Editor in 2.09 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.1 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 132.4 MB.
-Total: 15.141200 ms (FindLiveObjects: 1.410100 ms CreateObjectMapping: 1.016900 ms MarkObjects: 8.492800 ms  DeleteObjects: 4.219800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 2.37 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (3.4 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 133.2 MB.
-Total: 34.985000 ms (FindLiveObjects: 4.873100 ms CreateObjectMapping: 6.914700 ms MarkObjects: 19.222600 ms  DeleteObjects: 3.973100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.54 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.6 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 131.9 MB.
-Total: 30.243900 ms (FindLiveObjects: 1.812600 ms CreateObjectMapping: 2.361900 ms MarkObjects: 21.435200 ms  DeleteObjects: 4.632500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.57 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (5.3 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 131.2 MB.
-Total: 24.595000 ms (FindLiveObjects: 2.105800 ms CreateObjectMapping: 1.834600 ms MarkObjects: 11.218000 ms  DeleteObjects: 9.434600 ms)
+Unloading 6198 unused Assets / (4.7 MB). Loaded Objects now: 6963.
+Memory consumption went from 144.5 MB to 139.8 MB.
+Total: 14.031400 ms (FindLiveObjects: 0.849400 ms CreateObjectMapping: 1.669500 ms MarkObjects: 6.505200 ms  DeleteObjects: 5.005800 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 ========================================================================
@@ -886,1171 +316,623 @@ Received Prepare
 Refreshing native plugins compatible for Editor in 1.21 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.6 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 132.0 MB.
-Total: 22.907800 ms (FindLiveObjects: 0.872800 ms CreateObjectMapping: 1.379200 ms MarkObjects: 17.571000 ms  DeleteObjects: 3.083500 ms)
+Unloading 6192 unused Assets / (4.6 MB). Loaded Objects now: 6963.
+Memory consumption went from 144.6 MB to 140.0 MB.
+Total: 14.220000 ms (FindLiveObjects: 1.377500 ms CreateObjectMapping: 1.476900 ms MarkObjects: 7.641600 ms  DeleteObjects: 3.721900 ms)
 
 Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.82 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (3.4 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 133.1 MB.
-Total: 17.164500 ms (FindLiveObjects: 1.408100 ms CreateObjectMapping: 1.848400 ms MarkObjects: 9.139900 ms  DeleteObjects: 4.766800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.5 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 132.0 MB.
-Total: 13.689500 ms (FindLiveObjects: 0.911700 ms CreateObjectMapping: 1.448400 ms MarkObjects: 7.384400 ms  DeleteObjects: 3.943800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.74 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.1 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 132.4 MB.
-Total: 16.969700 ms (FindLiveObjects: 1.159800 ms CreateObjectMapping: 1.631100 ms MarkObjects: 9.260300 ms  DeleteObjects: 4.916900 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.39 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (3.6 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 132.9 MB.
-Total: 18.312200 ms (FindLiveObjects: 0.911700 ms CreateObjectMapping: 1.465100 ms MarkObjects: 11.779600 ms  DeleteObjects: 4.154300 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 5.96 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (6.6 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 130.0 MB.
-Total: 18.525700 ms (FindLiveObjects: 1.110900 ms CreateObjectMapping: 1.130500 ms MarkObjects: 9.251900 ms  DeleteObjects: 7.030800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 2.25 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.0 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 132.5 MB.
-Total: 29.669700 ms (FindLiveObjects: 7.298600 ms CreateObjectMapping: 2.452300 ms MarkObjects: 14.405400 ms  DeleteObjects: 5.511000 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.31 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.6 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 131.9 MB.
-Total: 16.130700 ms (FindLiveObjects: 0.862100 ms CreateObjectMapping: 0.946000 ms MarkObjects: 7.107300 ms  DeleteObjects: 7.213800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 102.802483 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6c2df4f58887c32aebfe76c3bd5d182e') in 0.1019136 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.55 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.3 MB). Loaded Objects now: 6932.
-Memory consumption went from 136.5 MB to 132.2 MB.
-Total: 15.868100 ms (FindLiveObjects: 1.543300 ms CreateObjectMapping: 1.657500 ms MarkObjects: 8.638600 ms  DeleteObjects: 4.026400 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 9.511107 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0461661623196a655c5888929ec97bc5') in 0.007923 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
 [Licensing::Client] Successfully resolved entitlement details
-- Loaded All Assemblies, in  4.027 seconds
-Refreshing native plugins compatible for Editor in 1.18 ms, found 3 plugins.
+- Loaded All Assemblies, in  2.017 seconds
+Refreshing native plugins compatible for Editor in 1.79 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.933 seconds
-Domain Reload Profiling: 4963ms
-	BeginReloadAssembly (826ms)
+- Finished resetting the current domain, in  1.226 seconds
+Domain Reload Profiling: 3239ms
+	BeginReloadAssembly (719ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (13ms)
+		DisableScriptedObjects (16ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (93ms)
-	RebuildCommonClasses (194ms)
-	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (36ms)
-	LoadAllAssembliesAndSetupDomain (2957ms)
-		LoadAssemblies (3328ms)
+		CreateAndSetChildDomain (320ms)
+	RebuildCommonClasses (73ms)
+	RebuildNativeTypeToScriptingClass (22ms)
+	initialDomainReloadingComplete (213ms)
+	LoadAllAssembliesAndSetupDomain (985ms)
+		LoadAssemblies (774ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (241ms)
-			TypeCache.Refresh (13ms)
+		AnalyzeDomain (489ms)
+			TypeCache.Refresh (23ms)
 				TypeCache.ScanAssembly (1ms)
-			BuildScriptInfoCaches (209ms)
-			ResolveRequiredComponents (14ms)
-	FinalizeReload (933ms)
+			BuildScriptInfoCaches (430ms)
+			ResolveRequiredComponents (26ms)
+	FinalizeReload (1226ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (734ms)
+		SetupLoadedEditorAssemblies (946ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
+			InitializePlatformSupportModulesInManaged (4ms)
 			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (176ms)
-			ProcessInitializeOnLoadAttributes (456ms)
-			ProcessInitializeOnLoadMethodAttributes (89ms)
-			AfterProcessingInitializeOnLoad (3ms)
+			BeforeProcessingInitializeOnLoad (235ms)
+			ProcessInitializeOnLoadAttributes (588ms)
+			ProcessInitializeOnLoadMethodAttributes (107ms)
+			AfterProcessingInitializeOnLoad (5ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (19ms)
-Refreshing native plugins compatible for Editor in 1.41 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6198 unused Assets / (4.2 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.3 MB to 132.1 MB.
-Total: 9.893700 ms (FindLiveObjects: 0.853100 ms CreateObjectMapping: 1.483600 ms MarkObjects: 4.862200 ms  DeleteObjects: 2.693700 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.22 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.7 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 131.8 MB.
-Total: 12.047200 ms (FindLiveObjects: 0.866200 ms CreateObjectMapping: 1.025000 ms MarkObjects: 5.896700 ms  DeleteObjects: 4.257600 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.56 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (3.7 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 132.8 MB.
-Total: 14.965500 ms (FindLiveObjects: 1.060300 ms CreateObjectMapping: 1.582700 ms MarkObjects: 7.861400 ms  DeleteObjects: 4.459500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 162.942998 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '062f49b04289317a69853cc17ba6d963') in 0.0240873 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.22 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (3.8 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 132.7 MB.
-Total: 14.410600 ms (FindLiveObjects: 0.891000 ms CreateObjectMapping: 1.516000 ms MarkObjects: 8.321300 ms  DeleteObjects: 3.681200 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 2.23 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.2 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 132.3 MB.
-Total: 11.770300 ms (FindLiveObjects: 0.876700 ms CreateObjectMapping: 1.348600 ms MarkObjects: 6.612000 ms  DeleteObjects: 2.931500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 21.941513 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2a0adcc34d2ec3287a4f6331261eea5a') in 0.0104386 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
+		AwakeInstancesAfterBackupRestoration (40ms)
 Refreshing native plugins compatible for Editor in 1.32 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.2 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 132.3 MB.
-Total: 9.825700 ms (FindLiveObjects: 0.908000 ms CreateObjectMapping: 0.975200 ms MarkObjects: 5.271400 ms  DeleteObjects: 2.670200 ms)
+Unloading 6198 unused Assets / (4.4 MB). Loaded Objects now: 6966.
+Memory consumption went from 144.4 MB to 140.0 MB.
+Total: 14.916300 ms (FindLiveObjects: 1.451400 ms CreateObjectMapping: 1.458200 ms MarkObjects: 7.651700 ms  DeleteObjects: 4.353200 ms)
 
 Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 12.566137 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4731b1d0d98996d72cb3ee674a6990e6') in 0.0052172 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
 ========================================================================
 Received Prepare
-Refreshing native plugins compatible for Editor in 1.50 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 2.08 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.5 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 132.0 MB.
-Total: 16.484300 ms (FindLiveObjects: 0.880300 ms CreateObjectMapping: 0.954100 ms MarkObjects: 10.850800 ms  DeleteObjects: 3.797600 ms)
+Unloading 6192 unused Assets / (4.1 MB). Loaded Objects now: 6966.
+Memory consumption went from 144.6 MB to 140.5 MB.
+Total: 20.141700 ms (FindLiveObjects: 1.725800 ms CreateObjectMapping: 2.107500 ms MarkObjects: 10.683800 ms  DeleteObjects: 5.622900 ms)
 
 Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 14.893054 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b4bb921573216ec453eb528390ffb997') in 0.0121995 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
 ========================================================================
 Received Prepare
-Refreshing native plugins compatible for Editor in 1.46 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 4.10 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.5 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 132.1 MB.
-Total: 17.139200 ms (FindLiveObjects: 1.272300 ms CreateObjectMapping: 1.757400 ms MarkObjects: 9.662200 ms  DeleteObjects: 4.445600 ms)
+Unloading 6192 unused Assets / (4.6 MB). Loaded Objects now: 6966.
+Memory consumption went from 144.6 MB to 140.0 MB.
+Total: 20.397200 ms (FindLiveObjects: 1.193900 ms CreateObjectMapping: 1.773600 ms MarkObjects: 13.117000 ms  DeleteObjects: 4.311100 ms)
 
 Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 20.683064 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2a3ad73af6181167718c3e81853e4e57') in 0.0062027 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
 ========================================================================
 Received Prepare
-Refreshing native plugins compatible for Editor in 1.28 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.98 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.6 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 131.9 MB.
-Total: 11.366700 ms (FindLiveObjects: 0.835100 ms CreateObjectMapping: 0.837200 ms MarkObjects: 5.873000 ms  DeleteObjects: 3.820000 ms)
+Unloading 6192 unused Assets / (4.8 MB). Loaded Objects now: 6966.
+Memory consumption went from 144.6 MB to 139.8 MB.
+Total: 40.214800 ms (FindLiveObjects: 1.697500 ms CreateObjectMapping: 1.919800 ms MarkObjects: 25.114100 ms  DeleteObjects: 11.481100 ms)
 
 Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 5.971192 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '42a84b4fe7e15281ce78fb9d123f7201') in 0.0051085 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
 ========================================================================
 Received Prepare
-Refreshing native plugins compatible for Editor in 2.95 ms, found 3 plugins.
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.553 seconds
+Refreshing native plugins compatible for Editor in 1.08 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.987 seconds
+Domain Reload Profiling: 2544ms
+	BeginReloadAssembly (736ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (9ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (310ms)
+	RebuildCommonClasses (86ms)
+	RebuildNativeTypeToScriptingClass (29ms)
+	initialDomainReloadingComplete (39ms)
+	LoadAllAssembliesAndSetupDomain (665ms)
+		LoadAssemblies (719ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (255ms)
+			TypeCache.Refresh (15ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (218ms)
+			ResolveRequiredComponents (16ms)
+	FinalizeReload (988ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (778ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (206ms)
+			ProcessInitializeOnLoadAttributes (491ms)
+			ProcessInitializeOnLoadMethodAttributes (69ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (24ms)
+Refreshing native plugins compatible for Editor in 1.16 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.1 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 132.5 MB.
-Total: 17.630300 ms (FindLiveObjects: 1.206400 ms CreateObjectMapping: 1.701800 ms MarkObjects: 10.497700 ms  DeleteObjects: 4.222900 ms)
+Unloading 6198 unused Assets / (3.9 MB). Loaded Objects now: 6969.
+Memory consumption went from 144.4 MB to 140.5 MB.
+Total: 10.964100 ms (FindLiveObjects: 1.490100 ms CreateObjectMapping: 1.415600 ms MarkObjects: 5.082600 ms  DeleteObjects: 2.974100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 3.26 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6192 unused Assets / (4.6 MB). Loaded Objects now: 6969.
+Memory consumption went from 144.6 MB to 140.0 MB.
+Total: 19.277500 ms (FindLiveObjects: 2.001800 ms CreateObjectMapping: 1.792100 ms MarkObjects: 10.139900 ms  DeleteObjects: 5.341200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+- Loaded All Assemblies, in  4.375 seconds
+Refreshing native plugins compatible for Editor in 1.90 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.615 seconds
+Domain Reload Profiling: 5990ms
+	BeginReloadAssembly (1946ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (32ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (319ms)
+	RebuildCommonClasses (137ms)
+	RebuildNativeTypeToScriptingClass (58ms)
+	initialDomainReloadingComplete (75ms)
+	LoadAllAssembliesAndSetupDomain (2158ms)
+		LoadAssemblies (2885ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (409ms)
+			TypeCache.Refresh (22ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (354ms)
+			ResolveRequiredComponents (25ms)
+	FinalizeReload (1616ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1310ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (10ms)
+			BeforeProcessingInitializeOnLoad (452ms)
+			ProcessInitializeOnLoadAttributes (744ms)
+			ProcessInitializeOnLoadMethodAttributes (99ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (23ms)
+Refreshing native plugins compatible for Editor in 1.16 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6198 unused Assets / (4.1 MB). Loaded Objects now: 6972.
+Memory consumption went from 144.5 MB to 140.4 MB.
+Total: 10.374400 ms (FindLiveObjects: 1.269600 ms CreateObjectMapping: 1.376200 ms MarkObjects: 5.015700 ms  DeleteObjects: 2.711500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 2.05 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6192 unused Assets / (5.0 MB). Loaded Objects now: 6972.
+Memory consumption went from 144.7 MB to 139.6 MB.
+Total: 18.101400 ms (FindLiveObjects: 1.833900 ms CreateObjectMapping: 1.898100 ms MarkObjects: 8.887000 ms  DeleteObjects: 5.480300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  2.123 seconds
+Refreshing native plugins compatible for Editor in 1.31 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.103 seconds
+Domain Reload Profiling: 3217ms
+	BeginReloadAssembly (951ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (14ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (518ms)
+	RebuildCommonClasses (113ms)
+	RebuildNativeTypeToScriptingClass (42ms)
+	initialDomainReloadingComplete (59ms)
+	LoadAllAssembliesAndSetupDomain (950ms)
+		LoadAssemblies (920ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (354ms)
+			TypeCache.Refresh (16ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (312ms)
+			ResolveRequiredComponents (19ms)
+	FinalizeReload (1103ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (871ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (174ms)
+			ProcessInitializeOnLoadAttributes (603ms)
+			ProcessInitializeOnLoadMethodAttributes (83ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (23ms)
+Refreshing native plugins compatible for Editor in 1.58 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6198 unused Assets / (4.4 MB). Loaded Objects now: 6975.
+Memory consumption went from 144.5 MB to 140.1 MB.
+Total: 13.330300 ms (FindLiveObjects: 1.424400 ms CreateObjectMapping: 1.776700 ms MarkObjects: 6.003000 ms  DeleteObjects: 4.124200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 1.20 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6192 unused Assets / (4.1 MB). Loaded Objects now: 6975.
+Memory consumption went from 144.7 MB to 140.6 MB.
+Total: 14.079400 ms (FindLiveObjects: 1.720000 ms CreateObjectMapping: 1.241000 ms MarkObjects: 7.103600 ms  DeleteObjects: 4.013400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.755 seconds
+Refreshing native plugins compatible for Editor in 1.13 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.419 seconds
+Domain Reload Profiling: 3151ms
+	BeginReloadAssembly (681ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (9ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (177ms)
+	RebuildCommonClasses (81ms)
+	RebuildNativeTypeToScriptingClass (30ms)
+	initialDomainReloadingComplete (227ms)
+	LoadAllAssembliesAndSetupDomain (712ms)
+		LoadAssemblies (842ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (280ms)
+			TypeCache.Refresh (13ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (246ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (1420ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1157ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (16ms)
+			BeforeProcessingInitializeOnLoad (290ms)
+			ProcessInitializeOnLoadAttributes (753ms)
+			ProcessInitializeOnLoadMethodAttributes (90ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (27ms)
+Refreshing native plugins compatible for Editor in 1.21 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6198 unused Assets / (4.2 MB). Loaded Objects now: 6978.
+Memory consumption went from 144.5 MB to 140.3 MB.
+Total: 11.420800 ms (FindLiveObjects: 0.931100 ms CreateObjectMapping: 1.565100 ms MarkObjects: 5.667200 ms  DeleteObjects: 3.256300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+- Loaded All Assemblies, in  1.015 seconds
+Refreshing native plugins compatible for Editor in 1.11 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.015 seconds
+Domain Reload Profiling: 2033ms
+	BeginReloadAssembly (307ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (12ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (64ms)
+	RebuildCommonClasses (48ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (35ms)
+	LoadAllAssembliesAndSetupDomain (610ms)
+		LoadAssemblies (486ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (270ms)
+			TypeCache.Refresh (13ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (237ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (1016ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (785ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (180ms)
+			ProcessInitializeOnLoadAttributes (507ms)
+			ProcessInitializeOnLoadMethodAttributes (86ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (25ms)
+Refreshing native plugins compatible for Editor in 1.78 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6198 unused Assets / (4.5 MB). Loaded Objects now: 6981.
+Memory consumption went from 144.6 MB to 140.1 MB.
+Total: 17.051800 ms (FindLiveObjects: 1.447900 ms CreateObjectMapping: 1.548800 ms MarkObjects: 8.864800 ms  DeleteObjects: 5.188000 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 ========================================================================
 Received Import Request.
-  Time since last request: 6.682488 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '537a475ea62a92c398ccf92633998c64') in 0.0057017 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+  Time since last request: 1885.960046 seconds.
+  path: Assets/Images/rocktexture.png
+  artifactKey: Guid(8f082b967770d48448959c5b44a48fd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/rocktexture.png using Guid(8f082b967770d48448959c5b44a48fd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f2b6e90ff7284ebf225dc6d2e8c0385c') in 0.4115398 seconds
+Number of updated asset objects reloaded before import = 1Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Prepare
 Refreshing native plugins compatible for Editor in 1.48 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.2 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 132.3 MB.
-Total: 14.247100 ms (FindLiveObjects: 0.825100 ms CreateObjectMapping: 1.055200 ms MarkObjects: 8.168300 ms  DeleteObjects: 4.197200 ms)
+Unloading 6192 unused Assets / (4.3 MB). Loaded Objects now: 6983.
+Memory consumption went from 144.8 MB to 140.5 MB.
+Total: 17.520400 ms (FindLiveObjects: 1.264400 ms CreateObjectMapping: 1.608200 ms MarkObjects: 10.829700 ms  DeleteObjects: 3.816300 ms)
 
 Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 5.856172 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '80e24d99dfcb36b3124cc341c297c8fa') in 0.0045695 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.69 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.1 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 132.4 MB.
-Total: 16.801400 ms (FindLiveObjects: 1.489900 ms CreateObjectMapping: 1.541400 ms MarkObjects: 10.165300 ms  DeleteObjects: 3.603300 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 5.445836 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '87ceb05b2628eebb6d5e423750e6ca39') in 0.0063388 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.80 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (3.8 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 132.7 MB.
-Total: 13.996500 ms (FindLiveObjects: 1.340100 ms CreateObjectMapping: 1.418100 ms MarkObjects: 6.601400 ms  DeleteObjects: 4.635100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 9.994967 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5fe0292ff36fdd47584894f9d558ac06') in 0.0061281 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.78 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.4 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 132.1 MB.
-Total: 20.577000 ms (FindLiveObjects: 1.428700 ms CreateObjectMapping: 1.582900 ms MarkObjects: 11.749200 ms  DeleteObjects: 5.814600 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 18.694256 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3567497b2a114c08647c33b349ff3eb7') in 0.0068311 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 3.07 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (3.9 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 132.6 MB.
-Total: 13.924800 ms (FindLiveObjects: 1.611700 ms CreateObjectMapping: 1.454500 ms MarkObjects: 7.145100 ms  DeleteObjects: 3.711500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 13.017107 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd977ad2157e9e35cadbd67e902ed4208') in 0.0059035 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.60 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (3.8 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 132.7 MB.
-Total: 22.634800 ms (FindLiveObjects: 1.403800 ms CreateObjectMapping: 2.772100 ms MarkObjects: 12.184800 ms  DeleteObjects: 6.272300 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 5.241223 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6a1491b439d163620328c1ec4044268a') in 0.00978 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.54 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.1 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 132.4 MB.
-Total: 13.136800 ms (FindLiveObjects: 0.937400 ms CreateObjectMapping: 1.540600 ms MarkObjects: 6.307900 ms  DeleteObjects: 4.349500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.68 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.2 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 132.3 MB.
-Total: 15.240700 ms (FindLiveObjects: 2.354200 ms CreateObjectMapping: 1.402400 ms MarkObjects: 7.965400 ms  DeleteObjects: 3.517300 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 10.476595 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '58360ccaeeaff2f5a7b3019847aa62a8') in 0.0093098 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.64 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (3.2 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 133.3 MB.
-Total: 19.740000 ms (FindLiveObjects: 1.194700 ms CreateObjectMapping: 1.129500 ms MarkObjects: 12.000100 ms  DeleteObjects: 5.413900 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 4.751926 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'de4a890bd67ee465b4c8f92b58fc1c62') in 0.006966 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.87 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (3.7 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 132.8 MB.
-Total: 23.918400 ms (FindLiveObjects: 1.148200 ms CreateObjectMapping: 1.199600 ms MarkObjects: 16.172900 ms  DeleteObjects: 5.395800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 5.837645 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9e6460ed30f9b44dcda21a2684972c47') in 0.006225 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.50 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.2 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 132.3 MB.
-Total: 15.627700 ms (FindLiveObjects: 1.095600 ms CreateObjectMapping: 1.355500 ms MarkObjects: 9.462400 ms  DeleteObjects: 3.712500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 4.188878 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ca5edfc0f33f5cf3b283abdabdef9915') in 0.0051964 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.75 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.1 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 132.4 MB.
-Total: 17.528700 ms (FindLiveObjects: 1.396900 ms CreateObjectMapping: 1.499700 ms MarkObjects: 10.712500 ms  DeleteObjects: 3.917900 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 7.023242 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3b6593d6b0faa5d07e49c95719802dd3') in 0.0065847 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.56 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.3 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 132.2 MB.
-Total: 19.990400 ms (FindLiveObjects: 2.860000 ms CreateObjectMapping: 2.964100 ms MarkObjects: 9.610700 ms  DeleteObjects: 4.553900 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 10.764946 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5aa1f5bead6ee5bba07678b1ad02972c') in 0.0060621 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.47 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.5 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 132.1 MB.
-Total: 18.268200 ms (FindLiveObjects: 1.026000 ms CreateObjectMapping: 1.791900 ms MarkObjects: 10.700700 ms  DeleteObjects: 4.747400 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 6.359436 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'de2c0aba5111a80b79bdc07589337f5a') in 0.0060192 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 2.15 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.7 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 131.8 MB.
-Total: 22.303000 ms (FindLiveObjects: 1.902400 ms CreateObjectMapping: 2.199600 ms MarkObjects: 13.840500 ms  DeleteObjects: 4.358700 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 9.561739 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e01d7104488b1a9698be0fc9e5bf2ac6') in 0.0059158 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 6.96 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.3 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 132.2 MB.
-Total: 24.259800 ms (FindLiveObjects: 2.427200 ms CreateObjectMapping: 2.146000 ms MarkObjects: 15.915500 ms  DeleteObjects: 3.769400 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 8.809857 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd73f193adca039cb644c6b1aa3674960') in 0.0068787 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.81 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (3.6 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 132.9 MB.
-Total: 63.032700 ms (FindLiveObjects: 1.838100 ms CreateObjectMapping: 3.829200 ms MarkObjects: 52.471600 ms  DeleteObjects: 4.891200 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 73.603770 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5619420cb9edb6eacadd980e91640e74') in 0.0135736 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 7.68 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (3.5 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 133.0 MB.
-Total: 80.014200 ms (FindLiveObjects: 6.746800 ms CreateObjectMapping: 10.247200 ms MarkObjects: 44.970700 ms  DeleteObjects: 18.048100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 2.46 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (5.3 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 131.3 MB.
-Total: 26.920100 ms (FindLiveObjects: 1.501800 ms CreateObjectMapping: 4.450700 ms MarkObjects: 13.635900 ms  DeleteObjects: 7.329500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 105.661138 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7a3e48dd203f05cd57499acd9f1372da') in 0.0181037 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.25 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.9 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 131.7 MB.
-Total: 14.839600 ms (FindLiveObjects: 1.002200 ms CreateObjectMapping: 1.566300 ms MarkObjects: 8.598900 ms  DeleteObjects: 3.670700 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 12.449882 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5404443d44a3a85274b32e2ccbe0142f') in 0.0063731 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 2.16 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (3.8 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 132.7 MB.
-Total: 21.942000 ms (FindLiveObjects: 1.936900 ms CreateObjectMapping: 1.797300 ms MarkObjects: 12.738700 ms  DeleteObjects: 5.467200 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 59.416995 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ed55136d7355071f8a5638648f797ec1') in 0.0047142 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.46 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.2 MB). Loaded Objects now: 6935.
-Memory consumption went from 136.5 MB to 132.3 MB.
-Total: 11.550100 ms (FindLiveObjects: 1.225200 ms CreateObjectMapping: 0.990600 ms MarkObjects: 5.560400 ms  DeleteObjects: 3.772600 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 24.842414 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '768447b5070e2ba226b1b85559c9ad67') in 0.0049251 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
 [Licensing::Client] Successfully resolved entitlement details
-- Loaded All Assemblies, in  1.338 seconds
-Refreshing native plugins compatible for Editor in 1.17 ms, found 3 plugins.
+- Loaded All Assemblies, in  1.288 seconds
+Refreshing native plugins compatible for Editor in 1.27 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.305 seconds
-Domain Reload Profiling: 2646ms
-	BeginReloadAssembly (349ms)
+- Finished resetting the current domain, in  1.019 seconds
+Domain Reload Profiling: 2311ms
+	BeginReloadAssembly (372ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (12ms)
+		DisableScriptedObjects (17ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (82ms)
+		CreateAndSetChildDomain (90ms)
 	RebuildCommonClasses (60ms)
 	RebuildNativeTypeToScriptingClass (19ms)
-	initialDomainReloadingComplete (35ms)
-	LoadAllAssembliesAndSetupDomain (877ms)
-		LoadAssemblies (683ms)
+	initialDomainReloadingComplete (40ms)
+	LoadAllAssembliesAndSetupDomain (800ms)
+		LoadAssemblies (719ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (369ms)
+		AnalyzeDomain (256ms)
 			TypeCache.Refresh (14ms)
 				TypeCache.ScanAssembly (1ms)
-			BuildScriptInfoCaches (329ms)
-			ResolveRequiredComponents (17ms)
-	FinalizeReload (1306ms)
+			BuildScriptInfoCaches (221ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (1020ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1042ms)
+		SetupLoadedEditorAssemblies (811ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (3ms)
-			SetLoadedEditorAssemblies (13ms)
-			BeforeProcessingInitializeOnLoad (226ms)
-			ProcessInitializeOnLoadAttributes (691ms)
-			ProcessInitializeOnLoadMethodAttributes (105ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (199ms)
+			ProcessInitializeOnLoadAttributes (515ms)
+			ProcessInitializeOnLoadMethodAttributes (84ms)
 			AfterProcessingInitializeOnLoad (4ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (21ms)
-Refreshing native plugins compatible for Editor in 1.20 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.31 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6198 unused Assets / (4.4 MB). Loaded Objects now: 6938.
-Memory consumption went from 136.4 MB to 132.0 MB.
-Total: 11.510400 ms (FindLiveObjects: 1.140700 ms CreateObjectMapping: 1.456700 ms MarkObjects: 5.927400 ms  DeleteObjects: 2.984200 ms)
+Unloading 6198 unused Assets / (4.1 MB). Loaded Objects now: 6986.
+Memory consumption went from 144.6 MB to 140.4 MB.
+Total: 14.592700 ms (FindLiveObjects: 1.697900 ms CreateObjectMapping: 1.589800 ms MarkObjects: 6.739200 ms  DeleteObjects: 4.564000 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
 [Licensing::Client] Successfully resolved entitlement details
-- Loaded All Assemblies, in  1.578 seconds
-Refreshing native plugins compatible for Editor in 1.74 ms, found 3 plugins.
+- Loaded All Assemblies, in  1.493 seconds
+Refreshing native plugins compatible for Editor in 1.35 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.168 seconds
-Domain Reload Profiling: 2748ms
-	BeginReloadAssembly (369ms)
+- Finished resetting the current domain, in  1.208 seconds
+Domain Reload Profiling: 2707ms
+	BeginReloadAssembly (394ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (13ms)
+		DisableScriptedObjects (15ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (113ms)
-	RebuildCommonClasses (57ms)
-	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (36ms)
-	LoadAllAssembliesAndSetupDomain (1100ms)
-		LoadAssemblies (941ms)
+		CreateAndSetChildDomain (87ms)
+	RebuildCommonClasses (58ms)
+	RebuildNativeTypeToScriptingClass (27ms)
+	initialDomainReloadingComplete (43ms)
+	LoadAllAssembliesAndSetupDomain (975ms)
+		LoadAssemblies (662ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (308ms)
-			TypeCache.Refresh (14ms)
+		AnalyzeDomain (518ms)
+			TypeCache.Refresh (15ms)
 				TypeCache.ScanAssembly (1ms)
-			BuildScriptInfoCaches (259ms)
-			ResolveRequiredComponents (25ms)
-	FinalizeReload (1168ms)
+			BuildScriptInfoCaches (476ms)
+			ResolveRequiredComponents (18ms)
+	FinalizeReload (1209ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (925ms)
+		SetupLoadedEditorAssemblies (940ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (3ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (213ms)
-			ProcessInitializeOnLoadAttributes (603ms)
-			ProcessInitializeOnLoadMethodAttributes (96ms)
+			SetLoadedEditorAssemblies (8ms)
+			BeforeProcessingInitializeOnLoad (246ms)
+			ProcessInitializeOnLoadAttributes (597ms)
+			ProcessInitializeOnLoadMethodAttributes (82ms)
 			AfterProcessingInitializeOnLoad (3ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (26ms)
-Refreshing native plugins compatible for Editor in 1.36 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6198 unused Assets / (4.0 MB). Loaded Objects now: 6941.
-Memory consumption went from 136.4 MB to 132.4 MB.
-Total: 10.731700 ms (FindLiveObjects: 0.960900 ms CreateObjectMapping: 0.917700 ms MarkObjects: 5.827400 ms  DeleteObjects: 3.024100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 2492.648621 seconds.
-  path: Assets/Scripts/WorldGenerating/TerrainGenerator.cs
-  artifactKey: Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/WorldGenerating/TerrainGenerator.cs using Guid(3823afc472e786a40a35703377b80096) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '49ab3ca9ca05b6f819c2fb9346cb1892') in 0.0380117 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.4 MB). Loaded Objects now: 6941.
-Memory consumption went from 136.6 MB to 132.2 MB.
-Total: 14.002400 ms (FindLiveObjects: 1.596300 ms CreateObjectMapping: 1.735800 ms MarkObjects: 7.908600 ms  DeleteObjects: 2.759500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-[Licensing::Client] Successfully resolved entitlement details
-- Loaded All Assemblies, in  1.638 seconds
-Refreshing native plugins compatible for Editor in 1.55 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.188 seconds
-Domain Reload Profiling: 2838ms
-	BeginReloadAssembly (635ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (14ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (98ms)
-	RebuildCommonClasses (65ms)
-	RebuildNativeTypeToScriptingClass (20ms)
-	initialDomainReloadingComplete (44ms)
-	LoadAllAssembliesAndSetupDomain (885ms)
-		LoadAssemblies (1045ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (264ms)
-			TypeCache.Refresh (13ms)
-				TypeCache.ScanAssembly (1ms)
-			BuildScriptInfoCaches (227ms)
-			ResolveRequiredComponents (18ms)
-	FinalizeReload (1188ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (948ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (3ms)
-			SetLoadedEditorAssemblies (9ms)
-			BeforeProcessingInitializeOnLoad (201ms)
-			ProcessInitializeOnLoadAttributes (647ms)
-			ProcessInitializeOnLoadMethodAttributes (83ms)
-			AfterProcessingInitializeOnLoad (5ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (24ms)
-Refreshing native plugins compatible for Editor in 1.45 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6198 unused Assets / (4.2 MB). Loaded Objects now: 6944.
-Memory consumption went from 136.4 MB to 132.2 MB.
-Total: 12.122400 ms (FindLiveObjects: 0.940600 ms CreateObjectMapping: 1.670800 ms MarkObjects: 6.269000 ms  DeleteObjects: 3.240600 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.90 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.4 MB). Loaded Objects now: 6944.
-Memory consumption went from 136.6 MB to 132.2 MB.
-Total: 13.874300 ms (FindLiveObjects: 1.363000 ms CreateObjectMapping: 1.368100 ms MarkObjects: 7.387900 ms  DeleteObjects: 3.753700 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-[Licensing::Client] Successfully resolved entitlement details
-- Loaded All Assemblies, in  1.553 seconds
+		AwakeInstancesAfterBackupRestoration (22ms)
 Refreshing native plugins compatible for Editor in 1.54 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6198 unused Assets / (4.2 MB). Loaded Objects now: 6989.
+Memory consumption went from 144.7 MB to 140.5 MB.
+Total: 11.134600 ms (FindLiveObjects: 0.927800 ms CreateObjectMapping: 1.410200 ms MarkObjects: 5.681700 ms  DeleteObjects: 3.113700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 1.91 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6192 unused Assets / (4.0 MB). Loaded Objects now: 6989.
+Memory consumption went from 144.9 MB to 140.8 MB.
+Total: 29.315700 ms (FindLiveObjects: 1.915600 ms CreateObjectMapping: 1.474900 ms MarkObjects: 21.301600 ms  DeleteObjects: 4.621700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+- Loaded All Assemblies, in  1.345 seconds
+Refreshing native plugins compatible for Editor in 1.23 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
 - Finished resetting the current domain, in  1.127 seconds
-Domain Reload Profiling: 2683ms
-	BeginReloadAssembly (811ms)
+Domain Reload Profiling: 2475ms
+	BeginReloadAssembly (321ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (18ms)
+		DisableScriptedObjects (10ms)
 		BackupInstance (0ms)
-		ReleaseScriptingObjects (1ms)
-		CreateAndSetChildDomain (102ms)
-	RebuildCommonClasses (66ms)
-	RebuildNativeTypeToScriptingClass (25ms)
-	initialDomainReloadingComplete (38ms)
-	LoadAllAssembliesAndSetupDomain (616ms)
-		LoadAssemblies (514ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (68ms)
+	RebuildCommonClasses (53ms)
+	RebuildNativeTypeToScriptingClass (24ms)
+	initialDomainReloadingComplete (45ms)
+	LoadAllAssembliesAndSetupDomain (904ms)
+		LoadAssemblies (799ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (264ms)
-			TypeCache.Refresh (13ms)
+		AnalyzeDomain (268ms)
+			TypeCache.Refresh (14ms)
 				TypeCache.ScanAssembly (1ms)
 			BuildScriptInfoCaches (230ms)
-			ResolveRequiredComponents (15ms)
-	FinalizeReload (1127ms)
+			ResolveRequiredComponents (17ms)
+	FinalizeReload (1128ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (829ms)
+		SetupLoadedEditorAssemblies (893ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (3ms)
-			SetLoadedEditorAssemblies (7ms)
-			BeforeProcessingInitializeOnLoad (217ms)
-			ProcessInitializeOnLoadAttributes (509ms)
-			ProcessInitializeOnLoadMethodAttributes (89ms)
+			SetLoadedEditorAssemblies (8ms)
+			BeforeProcessingInitializeOnLoad (244ms)
+			ProcessInitializeOnLoadAttributes (547ms)
+			ProcessInitializeOnLoadMethodAttributes (87ms)
 			AfterProcessingInitializeOnLoad (4ms)
-			EditorAssembliesLoaded (1ms)
+			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (28ms)
-Refreshing native plugins compatible for Editor in 1.70 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (26ms)
+Refreshing native plugins compatible for Editor in 1.25 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6198 unused Assets / (4.5 MB). Loaded Objects now: 6947.
-Memory consumption went from 136.5 MB to 131.9 MB.
-Total: 12.166700 ms (FindLiveObjects: 0.956900 ms CreateObjectMapping: 1.233800 ms MarkObjects: 6.573300 ms  DeleteObjects: 3.401300 ms)
+Unloading 6198 unused Assets / (4.2 MB). Loaded Objects now: 6992.
+Memory consumption went from 144.7 MB to 140.5 MB.
+Total: 11.457300 ms (FindLiveObjects: 0.852200 ms CreateObjectMapping: 1.374800 ms MarkObjects: 6.040300 ms  DeleteObjects: 3.189100 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 ========================================================================
 Received Prepare
-Refreshing native plugins compatible for Editor in 3.21 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 2.00 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (2.1 MB). Loaded Objects now: 6947.
-Memory consumption went from 136.7 MB to 134.6 MB.
-Total: 72.764300 ms (FindLiveObjects: 1.889700 ms CreateObjectMapping: 1.844100 ms MarkObjects: 64.059200 ms  DeleteObjects: 4.949700 ms)
+Unloading 6192 unused Assets / (3.3 MB). Loaded Objects now: 6992.
+Memory consumption went from 144.9 MB to 141.5 MB.
+Total: 82.969900 ms (FindLiveObjects: 2.460700 ms CreateObjectMapping: 4.529900 ms MarkObjects: 65.702900 ms  DeleteObjects: 10.274300 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
 [Licensing::Client] Successfully resolved entitlement details
-- Loaded All Assemblies, in  4.913 seconds
-Refreshing native plugins compatible for Editor in 1.14 ms, found 3 plugins.
+- Loaded All Assemblies, in  1.175 seconds
+Refreshing native plugins compatible for Editor in 1.17 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.038 seconds
-Domain Reload Profiling: 5954ms
-	BeginReloadAssembly (788ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (36ms)
+- Finished resetting the current domain, in  1.021 seconds
+Domain Reload Profiling: 2198ms
+	BeginReloadAssembly (413ms)
+		ExecutionOrderSort (1ms)
+		DisableScriptedObjects (15ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (241ms)
-	RebuildCommonClasses (147ms)
-	RebuildNativeTypeToScriptingClass (48ms)
-	initialDomainReloadingComplete (67ms)
-	LoadAllAssembliesAndSetupDomain (3865ms)
-		LoadAssemblies (3384ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (764ms)
-			TypeCache.Refresh (132ms)
-				TypeCache.ScanAssembly (1ms)
-			BuildScriptInfoCaches (609ms)
-			ResolveRequiredComponents (16ms)
-	FinalizeReload (1039ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (813ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (8ms)
-			BeforeProcessingInitializeOnLoad (203ms)
-			ProcessInitializeOnLoadAttributes (521ms)
-			ProcessInitializeOnLoadMethodAttributes (75ms)
-			AfterProcessingInitializeOnLoad (4ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (21ms)
-Refreshing native plugins compatible for Editor in 1.36 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6198 unused Assets / (4.5 MB). Loaded Objects now: 6950.
-Memory consumption went from 136.5 MB to 132.0 MB.
-Total: 13.441800 ms (FindLiveObjects: 1.427400 ms CreateObjectMapping: 1.558800 ms MarkObjects: 6.403700 ms  DeleteObjects: 4.050100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.33 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.3 MB). Loaded Objects now: 6950.
-Memory consumption went from 136.7 MB to 132.4 MB.
-Total: 16.297900 ms (FindLiveObjects: 0.943700 ms CreateObjectMapping: 1.787400 ms MarkObjects: 9.483700 ms  DeleteObjects: 4.081600 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  2.276 seconds
-Refreshing native plugins compatible for Editor in 1.56 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.975 seconds
-Domain Reload Profiling: 3255ms
-	BeginReloadAssembly (708ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (10ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (407ms)
-	RebuildCommonClasses (114ms)
-	RebuildNativeTypeToScriptingClass (26ms)
-	initialDomainReloadingComplete (61ms)
-	LoadAllAssembliesAndSetupDomain (1370ms)
-		LoadAssemblies (1071ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (491ms)
-			TypeCache.Refresh (12ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (455ms)
-			ResolveRequiredComponents (17ms)
-	FinalizeReload (976ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (752ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (169ms)
-			ProcessInitializeOnLoadAttributes (502ms)
-			ProcessInitializeOnLoadMethodAttributes (69ms)
-			AfterProcessingInitializeOnLoad (4ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (21ms)
-Refreshing native plugins compatible for Editor in 1.10 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6198 unused Assets / (4.3 MB). Loaded Objects now: 6953.
-Memory consumption went from 136.6 MB to 132.2 MB.
-Total: 9.393000 ms (FindLiveObjects: 0.910300 ms CreateObjectMapping: 0.797900 ms MarkObjects: 5.117200 ms  DeleteObjects: 2.566300 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.8 MB). Loaded Objects now: 6953.
-Memory consumption went from 136.8 MB to 131.9 MB.
-Total: 14.911700 ms (FindLiveObjects: 0.935300 ms CreateObjectMapping: 1.511500 ms MarkObjects: 7.283200 ms  DeleteObjects: 5.180200 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.354 seconds
-Refreshing native plugins compatible for Editor in 1.15 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.088 seconds
-Domain Reload Profiling: 2445ms
-	BeginReloadAssembly (615ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (9ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (137ms)
-	RebuildCommonClasses (60ms)
+		CreateAndSetChildDomain (97ms)
+	RebuildCommonClasses (57ms)
 	RebuildNativeTypeToScriptingClass (23ms)
-	initialDomainReloadingComplete (44ms)
-	LoadAllAssembliesAndSetupDomain (615ms)
-		LoadAssemblies (731ms)
+	initialDomainReloadingComplete (38ms)
+	LoadAllAssembliesAndSetupDomain (645ms)
+		LoadAssemblies (548ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (263ms)
-			TypeCache.Refresh (13ms)
+		AnalyzeDomain (277ms)
+			TypeCache.Refresh (14ms)
 				TypeCache.ScanAssembly (1ms)
-			BuildScriptInfoCaches (218ms)
-			ResolveRequiredComponents (24ms)
-	FinalizeReload (1089ms)
+			BuildScriptInfoCaches (242ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (1021ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (865ms)
+		SetupLoadedEditorAssemblies (777ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (7ms)
-			BeforeProcessingInitializeOnLoad (202ms)
-			ProcessInitializeOnLoadAttributes (565ms)
-			ProcessInitializeOnLoadMethodAttributes (85ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (8ms)
+			BeforeProcessingInitializeOnLoad (190ms)
+			ProcessInitializeOnLoadAttributes (490ms)
+			ProcessInitializeOnLoadMethodAttributes (81ms)
 			AfterProcessingInitializeOnLoad (4ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (21ms)
-Refreshing native plugins compatible for Editor in 2.52 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (29ms)
+Refreshing native plugins compatible for Editor in 2.48 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6198 unused Assets / (3.6 MB). Loaded Objects now: 6956.
-Memory consumption went from 136.6 MB to 133.0 MB.
-Total: 17.166900 ms (FindLiveObjects: 1.529200 ms CreateObjectMapping: 1.698100 ms MarkObjects: 10.145900 ms  DeleteObjects: 3.790000 ms)
+Unloading 6198 unused Assets / (4.2 MB). Loaded Objects now: 6995.
+Memory consumption went from 144.8 MB to 140.6 MB.
+Total: 10.511900 ms (FindLiveObjects: 0.937500 ms CreateObjectMapping: 0.990100 ms MarkObjects: 5.499600 ms  DeleteObjects: 3.083300 ms)
 
 Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.75 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6192 unused Assets / (4.3 MB). Loaded Objects now: 6956.
-Memory consumption went from 136.8 MB to 132.5 MB.
-Total: 18.260800 ms (FindLiveObjects: 1.589100 ms CreateObjectMapping: 1.722100 ms MarkObjects: 10.604300 ms  DeleteObjects: 4.343200 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.862 seconds
-Refreshing native plugins compatible for Editor in 1.26 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.006 seconds
-Domain Reload Profiling: 2872ms
-	BeginReloadAssembly (780ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (12ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (351ms)
-	RebuildCommonClasses (73ms)
-	RebuildNativeTypeToScriptingClass (64ms)
-	initialDomainReloadingComplete (256ms)
-	LoadAllAssembliesAndSetupDomain (692ms)
-		LoadAssemblies (712ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (307ms)
-			TypeCache.Refresh (15ms)
-				TypeCache.ScanAssembly (2ms)
-			BuildScriptInfoCaches (269ms)
-			ResolveRequiredComponents (18ms)
-	FinalizeReload (1007ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (796ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (7ms)
-			BeforeProcessingInitializeOnLoad (193ms)
-			ProcessInitializeOnLoadAttributes (514ms)
-			ProcessInitializeOnLoadMethodAttributes (75ms)
-			AfterProcessingInitializeOnLoad (4ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (22ms)
-Refreshing native plugins compatible for Editor in 1.16 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6198 unused Assets / (4.3 MB). Loaded Objects now: 6959.
-Memory consumption went from 136.6 MB to 132.4 MB.
-Total: 12.116500 ms (FindLiveObjects: 0.869600 ms CreateObjectMapping: 0.869500 ms MarkObjects: 6.218000 ms  DeleteObjects: 4.157900 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 1377.087759 seconds.
-  path: Assets/items/StonePickaxe 1.asset
-  artifactKey: Guid(bdabf4f4f8d5c814b93b1e94c9e78435) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/items/StonePickaxe 1.asset using Guid(bdabf4f4f8d5c814b93b1e94c9e78435) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b2ee257cc1216c4a64d31584c26cbdf1') in 0.176376 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-

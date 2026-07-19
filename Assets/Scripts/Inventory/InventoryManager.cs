@@ -42,11 +42,11 @@ public class InventoryManager : MonoBehaviour
         {
             int newSlot = selectedSlot;
 
-            if (scroll > 0f)
+            if (scroll < 0f)
             {
                 newSlot++;
             }
-            else if (scroll < 0f)
+            else if (scroll > 0f)
             {
                 newSlot--;
             }

@@ -22,6 +22,7 @@ public class Mining : MonoBehaviour
                 {
                     mineable.Mine();
                     invItem.currentDurability--;
+                    Debug.Log( "Durability: " + invItem.currentDurability );
                 }
             }
             

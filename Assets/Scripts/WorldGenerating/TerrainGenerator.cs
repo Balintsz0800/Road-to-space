@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using TreeEditor;
 using UnityEngine;
 using Random = System.Random;
 
@@ -95,8 +94,8 @@ public class TerrainGenerator : MonoBehaviour
     {
         GenerateWorld();
     }
-
-    private void GenerateWorld()
+    [ContextMenu("Generate World")]
+    public void GenerateWorld()
     {
         if (!Setup())
         {
@@ -132,7 +131,7 @@ public class TerrainGenerator : MonoBehaviour
 
         if (terrainVisualGenerator != null)
         {
-            //terrainVisualGenerator.GenerateVisuals(terrain, seed);
+            terrainVisualGenerator.GenerateVisuals(terrain, seed);
         }
         
         SpawnGarage();
@@ -329,7 +328,7 @@ public class TerrainGenerator : MonoBehaviour
                 float mountainHeight = GetMountainHeight(point, out float flatTop);
                 float height = baseHeight + GetHillHeight(u, v) + mountainHeight;
 
-                if (flatTop < 0)
+                if (flatTop > 0f)
                 {
                     height = Mathf.Lerp(height, baseHeight + mountainHeight, flatTop);
                 }
