@@ -292,14 +292,7 @@ public class TerrainVisualGenerator : MonoBehaviour
             }
         }
 
-        Debug.Log(
-            "TerrainVisualGenerator grass spawned: " +
-            placedGrassPositions.Count +
-            " | TooClose: " + failedTooClose +
-            " | Height: " + failedHeight +
-            " | Slope: " + failedSlope +
-            " | Noise: " + failedNoise
-        );
+        Debug.Log("TerrainVisualGenerator grass spawned: " + placedGrassPositions.Count + " | TooClose: " + failedTooClose + " | Height: " + failedHeight + " | Slope: " + failedSlope + " | Noise: " + failedNoise);
     }
 
     private void CreateGrassRoot()

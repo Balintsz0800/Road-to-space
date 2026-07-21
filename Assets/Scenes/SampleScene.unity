@@ -652,7 +652,7 @@ MonoBehaviour:
   seed: 12345
   terrain: {fileID: 2084262064}
   player: {fileID: 1083126220}
-  garagePrefab: {fileID: 1127956606389652844, guid: 17757b1ad42da0241835ba73a9c6befd, type: 3}
+  garagePrefab: {fileID: 8683781757515608921, guid: 17757b1ad42da0241835ba73a9c6befd, type: 3}
   terrainVisualGenerator: {fileID: 152216358}
   mapLength: 1000
   mapWidth: 1000
@@ -665,7 +665,7 @@ MonoBehaviour:
   hillLacunarity: 2
   detailFrequency: 12
   detailAmplitude: 4
-  generateMountains: 1
+  generateMountains: 0
   mountainCount: 30
   mountainDistanceFromEdge: 30
   mountainDistanceFromGarage: 100
@@ -679,7 +679,11 @@ MonoBehaviour:
   garageFlatRadius: 22
   garageBlendRadius: 15
   garageYOffset: 0.05
-  playerSpawnName: PlayerSpawn
+  playerSpawnPoint: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  playerSpawnYOffset: 0.1
   spawnRules:
   - label: Rock
     prefab: {fileID: 6707108797549677384, guid: 0881d81aa314e604fb045b95ae07ee7e, type: 3}
@@ -691,7 +695,7 @@ MonoBehaviour:
     alignToGround: 1
     yOffset: 0.7
     scaleRange: {x: 1, y: 1}
-    triesPerObject: 1
+    triesPerObject: 40
   - label: Tree
     prefab: {fileID: 649617978046588681, guid: feaa24085742ab441b454c2c28bb9330, type: 3}
     count: 200
@@ -702,7 +706,7 @@ MonoBehaviour:
     alignToGround: 1
     yOffset: 0
     scaleRange: {x: 0.7, y: 0.7}
-    triesPerObject: 1
+    triesPerObject: 40
 --- !u!114 &152216358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -724,19 +728,19 @@ MonoBehaviour:
   dirtNoiseThreshold: 0.6
   dirtSlopeStart: 10
   dirtSlopeEnd: 24
-  dirtAmount: 0.25
+  dirtAmount: 0.06
   rockSlopeStart: 28
   rockSlopeEnd: 48
   rockHeightStart: 0.58
   rockHeightEnd: 0.82
-  rockAmount: 0.85
+  rockAmount: 0.092
   blendNoiseFrequency: 12
   blendNoiseAmount: 0.18
   spawnGrassModels: 1
   grassPrefab: {fileID: 8075251542573186306, guid: 53213453b6cdc1049a568a4a893e449c, type: 3}
   grassCount: 20000
   triesPerGrass: 100
-  grassDistanceFromEdge: 20
+  grassDistanceFromEdge: 1
   minDistanceBetweenGrass: 0.1
   grassMaxSlope: 90
   grassMinHeight: 0

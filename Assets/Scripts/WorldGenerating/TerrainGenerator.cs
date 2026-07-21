@@ -32,50 +32,61 @@ public class TerrainGenerator : MonoBehaviour
         public float noiseX;
         public float noiseZ;
     }
-        
+    [Header("Seed")]
     public bool randomSeedOnStart = true;
     public int seed;
-        
+
+    [Header("References")]
     public Terrain terrain;
     public Transform player;
     public GameObject garagePrefab;
-
     public TerrainVisualGenerator terrainVisualGenerator;
 
+    [Header("Map Size")]
     public float mapLength = 1000f;
     public float mapWidth = 1000f;
     public float mapHeight = 180f;
 
+    [Header("Base Terrain")]
     public float baseHeight = 20f;
+
+    [Header("Hills")]
     [Min(1)] public int hillOctaves = 4;
     public float hillFrequency = 2.2f;
     public float hillAmplitude = 22f;
-        
     [Range(0.1f, 1f)] public float hillPersistence = 0.5f;
-        
     public float hillLacunarity = 2f;
+
+    [Header("Small Terrain Details")]
     public float detailFrequency = 12f;
     public float detailAmplitude = 4f;
-        
+
+    [Header("Mountains")]
     public bool generateMountains = true;
     [Min(0)] public int mountainCount = 30;
     public float mountainDistanceFromEdge = 30f;
     public float mountainDistanceFromGarage = 100f;
-        
     public Vector2 mountainRadiusRange = new Vector2(120f, 200f);
     public Vector2 mountainHeightRange = new Vector2(20f, 40f);
-        
-    [Range(1.1f, 3)] public float foothillRadiusMultiplier = 1.8f;
+
+    [Header("Mountain Shape")]
+    [Range(1.1f, 3f)] public float foothillRadiusMultiplier = 1.8f;
     [Range(0.05f, 0.7f)] public float foothillHeightPercent = 0.4f;
     [Range(0.1f, 0.6f)] public float mountainTopRadiusPercent = 0.4f;
     [Range(0f, 0.4f)] public float mountainIrregularity = 0.12f;
 
+    [Header("Garage")]
     public float garageDistanceFromEdge = 100f;
     public float garageFlatRadius = 22f;
     public float garageBlendRadius = 15f;
     public float garageYOffset = 0.05f;
-    public string playerSpawnName = "PlayerSpawn";
-        
+
+    [Header("Player Spawn")]
+    public Transform playerSpawnPoint;
+    public LayerMask groundLayer;
+    public float playerSpawnYOffset = 0.1f;
+
+    [Header("Resource Spawning")]
     public SpawnRule[] spawnRules;
     private Random random;
     private TerrainData terrainData;
@@ -416,36 +427,16 @@ public class TerrainGenerator : MonoBehaviour
     {
         Vector3 pos = GetWorldPosition(garagePos.x, garagePos.y, garageYOffset);
         Quaternion rotation = Quaternion.Euler(0f, RandomFloat(0f, 360f), 0f);
-
         GameObject garage = Instantiate(garagePrefab, pos, rotation, CreateGroup("Garage"));
-        Transform spawnPoint = FindChild(garage.transform, playerSpawnName);
 
-        if (spawnPoint != null)
+        if (playerSpawnPoint != null)
         {
-            MovePlayer(spawnPoint.position);
+            MovePlayer(GetSafePlayerSpawnPosition(playerSpawnPoint.position));
             return;
         }
 
-        MovePlayer(garage.transform.position + garage.transform.forward * 5f + Vector3.up * 2f);
-    }
-
-    private Transform FindChild(Transform parent, string targetName)
-    {
-        foreach (Transform child in parent)
-        {
-            if (child.name == targetName)
-            {
-                return child;
-            }
-
-            Transform found = FindChild(child, targetName);
-
-            if (found != null)
-            {
-                return found;
-            }
-        }
-        return null;
+        Vector3 fallbackSpawn = garage.transform.position + garage.transform.forward * 5f;
+        MovePlayer(GetSafePlayerSpawnPosition(fallbackSpawn));
     }
 
     private void MovePlayer(Vector3 pos)
@@ -471,6 +462,37 @@ public class TerrainGenerator : MonoBehaviour
         return group.transform;
     }
 
+    private Vector3 GetSafePlayerSpawnPosition(Vector3 wantedWorldPosition)
+    {
+        Vector3 rayStart = wantedWorldPosition + Vector3.up * 100f;
+
+        if (Physics.Raycast(rayStart, Vector3.down, out RaycastHit hit, 300f, groundLayer, QueryTriggerInteraction.Ignore))
+        {
+            return new Vector3(wantedWorldPosition.x, hit.point.y + GetPlayerRootGroundOffset() + playerSpawnYOffset, wantedWorldPosition.z);
+        }
+
+        float localX = wantedWorldPosition.x - terrain.transform.position.x;
+        float localZ = wantedWorldPosition.z - terrain.transform.position.z;
+        float u = Mathf.Clamp01(localX / mapWidth);
+        float v = Mathf.Clamp01(localZ / mapLength);
+        float groundHeight = terrainData.GetInterpolatedHeight(u, v);
+        float groundY = terrain.transform.position.y + groundHeight;
+        return new Vector3(wantedWorldPosition.x, groundY + GetPlayerRootGroundOffset() + playerSpawnYOffset, wantedWorldPosition.z);
+    }
+    
+    private float GetPlayerRootGroundOffset()
+    {
+        CapsuleCollider capsule = player.GetComponent<CapsuleCollider>();
+
+        if (capsule == null)
+        {
+            return 0f;
+        }
+
+        float bottomLocalY = capsule.center.y - capsule.height * 0.5f;
+        return -bottomLocalY;
+    }
+    
     private Vector3 GetWorldPosition(float x, float z, float yOffset)
     {
         float u = x / mapWidth;
