@@ -1,0 +1,675 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.2/staging' branch; Version is '6000.2.12f1 (e89d5df0e333) revision 15244637'; Using compiler version '194234433'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26100) 64bit IoTEnterpriseS' Language: 'hu' Physical Memory: 16326 MB
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Balint" at "2026-07-22T12:29:07.8375249Z"
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+Date: 2026-07-22T12:29:07Z
+
+COMMAND LINE ARGUMENTS:
+D:\Unity\6000.2.12f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/Road to space
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+54902
+-licensingIpc
+LicenseClient-Balint
+-job-worker-count
+3
+-background-job-worker-count
+8
+-gc-helper-count
+1
+-name
+AssetImport
+Successfully changed project path to: D:/Road to space
+D:/Road to space
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [13852]  Target information:
+
+Player connection [13852]  * "[IP] 192.168.0.21 [Port] 0 [Flags] 2 [Guid] 2277269276 [EditorId] 2277269276 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-81Q28MI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [13852]  * "[IP] 172.24.208.1 [Port] 0 [Flags] 2 [Guid] 2277269276 [EditorId] 2277269276 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-81Q28MI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [13852] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [13852] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 3
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 4.44 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.2.12f1 (e89d5df0e333)
+[Subsystems] Discovering subsystems at path D:/Unity/6000.2.12f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Road to space/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA Quadro M2000 (ID=0x1430)
+    Vendor:   NVIDIA
+    VRAM:     4031 MB
+    Driver:   32.0.15.8270
+Initialize mono
+Mono path[0] = 'D:/Unity/6000.2.12f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/6000.2.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity/6000.2.12f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56600
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/6000.2.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002149 seconds.
+- Loaded All Assemblies, in  0.799 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.716 seconds
+Domain Reload Profiling: 1514ms
+	BeginReloadAssembly (272ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (80ms)
+	RebuildNativeTypeToScriptingClass (27ms)
+	initialDomainReloadingComplete (82ms)
+	LoadAllAssembliesAndSetupDomain (336ms)
+		LoadAssemblies (270ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (331ms)
+			TypeCache.Refresh (328ms)
+				TypeCache.ScanAssembly (302ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (717ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (642ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (88ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (131ms)
+			ProcessInitializeOnLoadAttributes (292ms)
+			ProcessInitializeOnLoadMethodAttributes (122ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.17.4+4293ba1
+  Session Id:              5a6d320475d54d8688404c1ec05bc81a
+  Correlation Id:          f504e50e377eaa01af13ac92b5a08372
+  External correlation Id: 8627782714812850075
+  Machine Id:              BO9ILETdmIkPD3LAVbia6TFr59M=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Balint" (connect: 0.00s, validation: 0.00s, handshake: 2.72s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Balint-notifications" at "2026-07-22T12:29:10.5651949Z"
+[Licensing::Module] Licensing Background thread has ended after 2.73s
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 7972442677409-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+- Loaded All Assemblies, in  1.400 seconds
+Refreshing native plugins compatible for Editor in 1.66 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.728 seconds
+Domain Reload Profiling: 3125ms
+	BeginReloadAssembly (339ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (13ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (59ms)
+	RebuildCommonClasses (72ms)
+	RebuildNativeTypeToScriptingClass (22ms)
+	initialDomainReloadingComplete (75ms)
+	LoadAllAssembliesAndSetupDomain (888ms)
+		LoadAssemblies (595ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (486ms)
+			TypeCache.Refresh (382ms)
+				TypeCache.ScanAssembly (359ms)
+			BuildScriptInfoCaches (83ms)
+			ResolveRequiredComponents (16ms)
+	FinalizeReload (1728ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1381ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (370ms)
+			ProcessInitializeOnLoadAttributes (860ms)
+			ProcessInitializeOnLoadMethodAttributes (137ms)
+			AfterProcessingInitializeOnLoad (5ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Refreshing native plugins compatible for Editor in 1.81 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6200 unused Assets / (4.5 MB). Loaded Objects now: 6915.
+Memory consumption went from 132.4 MB to 127.9 MB.
+Total: 22.513100 ms (FindLiveObjects: 2.211800 ms CreateObjectMapping: 1.747700 ms MarkObjects: 12.704400 ms  DeleteObjects: 5.845400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 186594.668493 seconds.
+  path: Assets/New Terrain.asset
+  artifactKey: Guid(4254ae32daa7262439dd544c1f59f4b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Terrain.asset using Guid(4254ae32daa7262439dd544c1f59f4b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '54a30670804270b5d0988d99a7942e2d') in 0.179178 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.779797 seconds.
+  path: Assets/Scripts/WorldGenerating/TerrainVisualGenerator.cs
+  artifactKey: Guid(c7752781d3e745d44acfebee6ef48398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/WorldGenerating/TerrainVisualGenerator.cs using Guid(c7752781d3e745d44acfebee6ef48398) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cdcd5b5faf72f4fd5bca092b591b23a6') in 0.0232127 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 162.537164 seconds.
+  path: Assets/Prefabs/garage.prefab
+  artifactKey: Guid(17757b1ad42da0241835ba73a9c6befd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/garage.prefab using Guid(17757b1ad42da0241835ba73a9c6befd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5d82df075ccd0dbd2b4700be981808bc') in 0.7345703 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 282
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.234403 seconds.
+  path: Assets/Prefabs/garage.prefab
+  artifactKey: Guid(17757b1ad42da0241835ba73a9c6befd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/garage.prefab using Guid(17757b1ad42da0241835ba73a9c6befd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1d3e1b3a2a8e99150dafbfe7a8ae0964') in 0.0283283 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 284
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.542748 seconds.
+  path: Assets/Prefabs/garage.prefab
+  artifactKey: Guid(17757b1ad42da0241835ba73a9c6befd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/garage.prefab using Guid(17757b1ad42da0241835ba73a9c6befd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '67b67c2f77e3f2b72504bb4d055d7dc1') in 0.0202851 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 284
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.138538 seconds.
+  path: Assets/Prefabs/garage.prefab
+  artifactKey: Guid(17757b1ad42da0241835ba73a9c6befd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/garage.prefab using Guid(17757b1ad42da0241835ba73a9c6befd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f80e695bb08944783f52b6aef58d8314') in 0.0184755 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 284
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.144546 seconds.
+  path: Assets/Prefabs/garage.prefab
+  artifactKey: Guid(17757b1ad42da0241835ba73a9c6befd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/garage.prefab using Guid(17757b1ad42da0241835ba73a9c6befd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '91ab9927e5646ec31c6e7255cee1bfeb') in 0.0209033 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 286
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.642893 seconds.
+  path: Assets/Prefabs/garage.prefab
+  artifactKey: Guid(17757b1ad42da0241835ba73a9c6befd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/garage.prefab using Guid(17757b1ad42da0241835ba73a9c6befd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'de0256ed2028c87e8e29e80e1159fdb2') in 0.0205327 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 286
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.526174 seconds.
+  path: Assets/Prefabs/garage.prefab
+  artifactKey: Guid(17757b1ad42da0241835ba73a9c6befd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/garage.prefab using Guid(17757b1ad42da0241835ba73a9c6befd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1da63220c5579c30b1fc18bd5a5ae76b') in 0.0189271 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 286
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.604048 seconds.
+  path: Assets/Prefabs/garage.prefab
+  artifactKey: Guid(17757b1ad42da0241835ba73a9c6befd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/garage.prefab using Guid(17757b1ad42da0241835ba73a9c6befd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fae58c8cbac7c2fd87ae80d7acfbbd09') in 0.0216607 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 288
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.762467 seconds.
+  path: Assets/Prefabs/garage.prefab
+  artifactKey: Guid(17757b1ad42da0241835ba73a9c6befd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/garage.prefab using Guid(17757b1ad42da0241835ba73a9c6befd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c52ffdb1fe7d63052188324a4153c480') in 0.0226563 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 288
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.127793 seconds.
+  path: Assets/Prefabs/garage.prefab
+  artifactKey: Guid(17757b1ad42da0241835ba73a9c6befd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/garage.prefab using Guid(17757b1ad42da0241835ba73a9c6befd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1b7628c990ae33addae459deedc4777d') in 0.0185545 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 288
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.701690 seconds.
+  path: Assets/Prefabs/garage.prefab
+  artifactKey: Guid(17757b1ad42da0241835ba73a9c6befd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/garage.prefab using Guid(17757b1ad42da0241835ba73a9c6befd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '88ba7c6573959b559aef47d6dd529f4f') in 0.0210683 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 288
+
+========================================================================
+Received Import Request.
+  Time since last request: 80.098162 seconds.
+  path: Assets/Images/grass.png
+  artifactKey: Guid(a0d31e1dbfa71904988ce2933f497889) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Images/grass.png using Guid(a0d31e1dbfa71904988ce2933f497889) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e7e34ef3a422d3c6d6979dc160fe0113') in 0.338605 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/TextMesh Pro/Anime Trees/Models/AnimeTree_08.fbx
+  artifactKey: Guid(593cc1eebd619ee418fff8ecc7ef27ca) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TextMesh Pro/Anime Trees/Models/AnimeTree_08.fbx using Guid(593cc1eebd619ee418fff8ecc7ef27ca) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '07b2e4c0d45afa8cbaf77555ee79e17b') in 0.1639239 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/TextMesh Pro/Anime Trees/Models/AnimeTree_04.fbx
+  artifactKey: Guid(4c48390ff27b8764ea1ab2dee2b11c6f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TextMesh Pro/Anime Trees/Models/AnimeTree_04.fbx using Guid(4c48390ff27b8764ea1ab2dee2b11c6f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '55fac760cb214a30acfd7b51ab5ad0cf') in 0.0464543 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/New Terrain.asset
+  artifactKey: Guid(4254ae32daa7262439dd544c1f59f4b5) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/New Terrain.asset using Guid(4254ae32daa7262439dd544c1f59f4b5) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ceced4d3320beec2afe11a4fa6b0f654') in 0.0371756 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Scripts/Inventory/InventoryManager.cs
+  artifactKey: Guid(c280db56f9a51224e9d4eecd0a27db21) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Scripts/Inventory/InventoryManager.cs using Guid(c280db56f9a51224e9d4eecd0a27db21) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '824fad0298b5d7f3d8f4a526a7496a23') in 0.0145548 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/TextMesh Pro/Anime Trees/Models/AnimeBush_04.fbx
+  artifactKey: Guid(afb6d888b26027547a452ab79564c79f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TextMesh Pro/Anime Trees/Models/AnimeBush_04.fbx using Guid(afb6d888b26027547a452ab79564c79f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8b41d431b3b8c962e8cec497b9cd06a7') in 0.0336138 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Images/dirt.png
+  artifactKey: Guid(92f957aede6ecc948a6e52177feb3821) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Images/dirt.png using Guid(92f957aede6ecc948a6e52177feb3821) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '02fb892d1274fb132c6522607691f4ce') in 0.0415645 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/TextMesh Pro/Anime Trees/Prefabs/Tree_02.prefab
+  artifactKey: Guid(e96f939c383e704438188e9d559f1174) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TextMesh Pro/Anime Trees/Prefabs/Tree_02.prefab using Guid(e96f939c383e704438188e9d559f1174) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2cea3ddb6bcd5272ea3ac661fdef6369') in 0.1454163 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 18
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/TextMesh Pro/Anime Trees/Scenes/AnimeTrees
+  artifactKey: Guid(da6c57b3f2f8e9e488fb371ec62b2aec) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TextMesh Pro/Anime Trees/Scenes/AnimeTrees using Guid(da6c57b3f2f8e9e488fb371ec62b2aec) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd6b693735be168e3b7a64aa60f5d25de') in 0.016478 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/TextMesh Pro/Anime Trees/Scenes/AllAssets.unity
+  artifactKey: Guid(ec350948d2ea773418d049e7efa08f48) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TextMesh Pro/Anime Trees/Scenes/AllAssets.unity using Guid(ec350948d2ea773418d049e7efa08f48) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '5969e6d085efd6382a3348cc658d0086') in 0.0373588 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/TextMesh Pro/Anime Trees/Textures/GrassLayer.terrainlayer
+  artifactKey: Guid(3999f4c709f8970409848a9e0fc1da21) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TextMesh Pro/Anime Trees/Textures/GrassLayer.terrainlayer using Guid(3999f4c709f8970409848a9e0fc1da21) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c34a0812bb9607139fe880d8b2b3ff2d') in 0.0646608 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Images/grass1
+  artifactKey: Guid(1078bebb85c92ae43857997086ae69a0) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Images/grass1 using Guid(1078bebb85c92ae43857997086ae69a0) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ed14e7947e0821dbc8affbfaa947861a') in 0.0114675 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/TextMesh Pro/Anime Trees/Matrials/Leafs_04.mat
+  artifactKey: Guid(844b28ae5ca870f4ba8fa7769921f725) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TextMesh Pro/Anime Trees/Matrials/Leafs_04.mat using Guid(844b28ae5ca870f4ba8fa7769921f725) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'fb7b3e22c983a4fa4d3938ee6cb60982') in 0.0718456 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/TextMesh Pro/Anime Trees/Models/AnimeTree_01.fbx
+  artifactKey: Guid(a64bb50d45fc29e4a8340710f7dd4b78) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TextMesh Pro/Anime Trees/Models/AnimeTree_01.fbx using Guid(a64bb50d45fc29e4a8340710f7dd4b78) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '078a5ebf2b5f7e29a555fdba786e704b') in 0.0852101 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Prefabs/Grass.prefab
+  artifactKey: Guid(53213453b6cdc1049a568a4a893e449c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Prefabs/Grass.prefab using Guid(53213453b6cdc1049a568a4a893e449c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ecd1e20f5c84a0882cb1c7018b3381ef') in 0.0596203 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 28
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Scripts/Tools/Tools.cs
+  artifactKey: Guid(7ee73450858512d4d97d57ced7ef35eb) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Scripts/Tools/Tools.cs using Guid(7ee73450858512d4d97d57ced7ef35eb) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e76dd2d16d6e640725b63f16ee49e668') in 0.0181543 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/TextMesh Pro/Anime Trees/Matrials/Water.mat
+  artifactKey: Guid(ca7cb3d71944b91439f5b75372e3bdef) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TextMesh Pro/Anime Trees/Matrials/Water.mat using Guid(ca7cb3d71944b91439f5b75372e3bdef) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '281201b86587a60637faac24947b1e74') in 0.045189 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Images/rocktexture.png
+  artifactKey: Guid(8f082b967770d48448959c5b44a48fd7) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Images/rocktexture.png using Guid(8f082b967770d48448959c5b44a48fd7) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '39b19edaaa2af46bd250d565f332bbb1') in 0.0274051 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/TextMesh Pro/Anime Trees/Prefabs/Tree_07.prefab
+  artifactKey: Guid(d56b774f386e40441bc733dbd13b0a2f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TextMesh Pro/Anime Trees/Prefabs/Tree_07.prefab using Guid(d56b774f386e40441bc733dbd13b0a2f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7cebc3374d655240ad366c73c9f51c06') in 0.0938771 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 18
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/TextMesh Pro/Anime Trees/Prefabs/Tree_04.prefab
+  artifactKey: Guid(4a378afb8de68044f986ae019d0f10ac) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TextMesh Pro/Anime Trees/Prefabs/Tree_04.prefab using Guid(4a378afb8de68044f986ae019d0f10ac) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '66d58a7db8bae1adfb8c0e403e8df62f') in 0.04975 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 18
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/TextMesh Pro/Anime Trees/Prefabs/Tree_03.prefab
+  artifactKey: Guid(23aeb96941b49fb49befd2058dd75b79) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TextMesh Pro/Anime Trees/Prefabs/Tree_03.prefab using Guid(23aeb96941b49fb49befd2058dd75b79) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '943c11edec5904ce5d01cf16b72e7e42') in 0.0988228 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 18
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/TextMesh Pro/Anime Trees/Textures/LeafMain.png
+  artifactKey: Guid(68983f9dcf78e6c4e83d1b888e3905b9) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TextMesh Pro/Anime Trees/Textures/LeafMain.png using Guid(68983f9dcf78e6c4e83d1b888e3905b9) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '0b62dc2add5c6772a41c642b4437328a') in 0.0263804 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/TextMesh Pro/Anime Trees/Models/AnimeBush_03.fbx
+  artifactKey: Guid(e804910e894fd24448b162a8c4d8d6bc) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TextMesh Pro/Anime Trees/Models/AnimeBush_03.fbx using Guid(e804910e894fd24448b162a8c4d8d6bc) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'eaccb6ff0ab3414145e6addf88b66f3d') in 0.0277094 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/TextMesh Pro/Anime Trees/Scenes/LensFlare.asset
+  artifactKey: Guid(365b8198f9e3e404da19c7ddbb3ae1d4) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TextMesh Pro/Anime Trees/Scenes/LensFlare.asset using Guid(365b8198f9e3e404da19c7ddbb3ae1d4) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '84972b4e11a46ffa124960f722b0f126') in 0.0645548 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/TextMesh Pro/Anime Trees/Matrials/Leafs_02.mat
+  artifactKey: Guid(7e082e700f5982d47a872f9aa3980b0a) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TextMesh Pro/Anime Trees/Matrials/Leafs_02.mat using Guid(7e082e700f5982d47a872f9aa3980b0a) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '37c788a865f85910e59659dd437d08c2') in 0.0245605 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.033977 seconds.
+  path: Assets/Animations
+  artifactKey: Guid(5c0edab012e9e9349b5453b44b82df9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations using Guid(5c0edab012e9e9349b5453b44b82df9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '021be238b1aebd0809a385f0f08208d7') in 0.0008049 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.314937 seconds.
+  path: Assets/TextMesh Pro/Anime Trees/Models/AnimeTree_03.fbx
+  artifactKey: Guid(7e55a510a0912bc45ab3d122fbfcf8ce) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TextMesh Pro/Anime Trees/Models/AnimeTree_03.fbx using Guid(7e55a510a0912bc45ab3d122fbfcf8ce) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2efeb297b008e4f87ed1e9bcdb3655df') in 0.109742 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/TextMesh Pro/Anime Trees/Matrials/Leafs_03.mat
+  artifactKey: Guid(1f0a48b1f0d0bba4290813050b3b966e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TextMesh Pro/Anime Trees/Matrials/Leafs_03.mat using Guid(1f0a48b1f0d0bba4290813050b3b966e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '3371874a1ea751e66f3f7f0d334ab33f') in 0.0302434 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/TextMesh Pro/Anime Trees/Models/AnimeBush_02.fbx
+  artifactKey: Guid(ad2af31db78f62541b423694781f7c92) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TextMesh Pro/Anime Trees/Models/AnimeBush_02.fbx using Guid(ad2af31db78f62541b423694781f7c92) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '272e4596a73b3b28c46164320264309e') in 0.0298527 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/TextMesh Pro/Anime Trees/Matrials/Grass_LOD0.mat
+  artifactKey: Guid(7666a242c241d714f8d4eae3d4367a33) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TextMesh Pro/Anime Trees/Matrials/Grass_LOD0.mat using Guid(7666a242c241d714f8d4eae3d4367a33) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '35ead4a0c5eb51143167952c2be0007c') in 0.0173621 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/TextMesh Pro/Anime Trees/Prefabs/Tree_05.prefab
+  artifactKey: Guid(1793f6da575996c40bf5fb4686d1743e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TextMesh Pro/Anime Trees/Prefabs/Tree_05.prefab using Guid(1793f6da575996c40bf5fb4686d1743e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2fd1b526e6f9c458bffa30a8dd88ee82') in 0.0768667 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 18
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/TextMesh Pro/Anime Trees/Shaders/Grass/MainLight.shadersubgraph
+  artifactKey: Guid(231093b74d3ab1341aa61c0ebb5d779d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TextMesh Pro/Anime Trees/Shaders/Grass/MainLight.shadersubgraph using Guid(231093b74d3ab1341aa61c0ebb5d779d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '0931dcf7574b7deaabcae16b946f2bf1') in 0.0327944 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/TextMesh Pro/Anime Trees/Textures/Grass.png
+  artifactKey: Guid(c2c41b39d91c90f4f88eaba64dc60d7d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TextMesh Pro/Anime Trees/Textures/Grass.png using Guid(c2c41b39d91c90f4f88eaba64dc60d7d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '01519e6a364a2a801e42fe05eb27a5db') in 0.025175 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/TextMesh Pro/Anime Trees/Textures/Bark.png
+  artifactKey: Guid(7872f046ef2a2244b9999dc417a25a67) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TextMesh Pro/Anime Trees/Textures/Bark.png using Guid(7872f046ef2a2244b9999dc417a25a67) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'dc5e6c5c89df9642716393160b359a31') in 0.0407907 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/TextMesh Pro/Anime Trees/Prefabs/Tree_08.prefab
+  artifactKey: Guid(9ac23f469b1f4b5418eb521662fb2eb0) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TextMesh Pro/Anime Trees/Prefabs/Tree_08.prefab using Guid(9ac23f469b1f4b5418eb521662fb2eb0) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '97cc29cdfbab0496f4ff827808e64150') in 0.0536983 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 18
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/TextMesh Pro/Anime Trees/Models/Grass.fbx
+  artifactKey: Guid(78f79c5f6d2fc2f49a5b00d115ae6c6f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TextMesh Pro/Anime Trees/Models/Grass.fbx using Guid(78f79c5f6d2fc2f49a5b00d115ae6c6f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8e6455ec0c494c81b6e66845ef630cd8') in 0.0206205 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/TextMesh Pro/Anime Trees/Models/GrassMesh.fbx
+  artifactKey: Guid(de87e9c306b3d60459929e1a56f818f4) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TextMesh Pro/Anime Trees/Models/GrassMesh.fbx using Guid(de87e9c306b3d60459929e1a56f818f4) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '9799bd3bd5503dfa8c202ad971bf7f43') in 0.0442957 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Scripts/WorldGenerating/TerrainVisualGenerator.cs
+  artifactKey: Guid(c7752781d3e745d44acfebee6ef48398) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Scripts/WorldGenerating/TerrainVisualGenerator.cs using Guid(c7752781d3e745d44acfebee6ef48398) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '114d7c4c22590f90f5f06da258f65145') in 0.0148132 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/TextMesh Pro/Anime Trees/Models/AnimeTree_05.fbx
+  artifactKey: Guid(571e3c292eba1ce489de7a9151db0b5d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/TextMesh Pro/Anime Trees/Models/AnimeTree_05.fbx using Guid(571e3c292eba1ce489de7a9151db0b5d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '055b6b989357e0c0b93ab4fe7f9ae518') in 0.0325554 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.410656 seconds.
+  path: Assets/Animations
+  artifactKey: Guid(5c0edab012e9e9349b5453b44b82df9e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Animations using Guid(5c0edab012e9e9349b5453b44b82df9e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '832ebfd9f3b4c493cd453c5b571f15c3') in 0.0134046 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.699495 seconds.
+  path: Assets/Animations/New Animator Controller.controller
+  artifactKey: Guid(4bd08ac6e132eec4799404132a783e1d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Animations/New Animator Controller.controller using Guid(4bd08ac6e132eec4799404132a783e1d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a0b0b016125a01a9ef4ac51c74190e50') in 0.0317309 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.387801 seconds.
+  path: Assets/Animations/New Animator Controller.controller
+  artifactKey: Guid(4bd08ac6e132eec4799404132a783e1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/New Animator Controller.controller using Guid(4bd08ac6e132eec4799404132a783e1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c24d12cc4086965a162d71d9e42e9059') in 0.001666 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.606978 seconds.
+  path: Assets/Animations/GarageDoorAnimator.controller
+  artifactKey: Guid(4bd08ac6e132eec4799404132a783e1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/GarageDoorAnimator.controller using Guid(4bd08ac6e132eec4799404132a783e1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1169d8740ada3b17617aef97deb8d2c5') in 0.0016548 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.923580 seconds.
+  path: Assets/Animations/GarageDoorAnimator.controller
+  artifactKey: Guid(4bd08ac6e132eec4799404132a783e1d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Animations/GarageDoorAnimator.controller using Guid(4bd08ac6e132eec4799404132a783e1d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7c5116d81b61641daa161f81e75a4250') in 0.0149675 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 256.350638 seconds.
+  path: Assets/Animations/GarageDoorOpen.anim
+  artifactKey: Guid(048bbd9bc073a9c48ab27b78170245b8) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Animations/GarageDoorOpen.anim using Guid(048bbd9bc073a9c48ab27b78170245b8) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1532c6b23668e2b73afdae162b411910') in 0.0550613 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
