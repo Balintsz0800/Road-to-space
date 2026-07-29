@@ -1442,6 +1442,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2862156136128273904}
   - component: {fileID: 3958867492476787172}
+  - component: {fileID: 4430218036381999780}
   m_Layer: 0
   m_Name: GarageDoorRootR
   m_TagString: Untagged
@@ -1458,7 +1459,7 @@ Transform:
   m_GameObject: {fileID: 4968437552455525066}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5.12}
+  m_LocalPosition: {x: 0, y: 0, z: 5.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1479,7 +1480,7 @@ Animator:
   m_GameObject: {fileID: 4968437552455525066}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eaf82e964a70f92408a5eb80204138a5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 58705092ca36019428ef0426937116d3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1491,6 +1492,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4430218036381999780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4968437552455525066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b5caaa97444a634387a1ad534f04a44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorAnimation
 --- !u!1 &4996547967544692966
 GameObject:
   m_ObjectHideFlags: 0
@@ -1532,6 +1545,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9108552298161501218}
   - component: {fileID: 8416356657519797586}
+  - component: {fileID: 2628520271589391172}
   m_Layer: 0
   m_Name: GarageDoorRoot
   m_TagString: Untagged
@@ -1569,7 +1583,7 @@ Animator:
   m_GameObject: {fileID: 5164739661393991882}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d028b7ea2ccee864cb1bde9363eede3a, type: 2}
+  m_Controller: {fileID: 9100000, guid: d30a1441561c0074da8b5e035565a7bd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1581,6 +1595,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2628520271589391172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5164739661393991882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b5caaa97444a634387a1ad534f04a44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorAnimation
 --- !u!1 &5421312699800737862
 GameObject:
   m_ObjectHideFlags: 0
@@ -1591,6 +1617,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7755259232642778455}
   - component: {fileID: 9174164058974582750}
+  - component: {fileID: 734938215630001064}
   m_Layer: 0
   m_Name: GarageDoorRootL
   m_TagString: Untagged
@@ -1628,7 +1655,7 @@ Animator:
   m_GameObject: {fileID: 5421312699800737862}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4bd08ac6e132eec4799404132a783e1d, type: 2}
+  m_Controller: {fileID: 9100000, guid: 594aac29afd43cf4da4bbc35a39a8526, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1640,6 +1667,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &734938215630001064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5421312699800737862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b5caaa97444a634387a1ad534f04a44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorAnimation
 --- !u!1 &5647332569243106580
 GameObject:
   m_ObjectHideFlags: 0
