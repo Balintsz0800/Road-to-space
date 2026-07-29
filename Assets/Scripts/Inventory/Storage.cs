@@ -1,9 +1,9 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class CraftingTable : MonoBehaviour
+public class Storage : MonoBehaviour
 {
-    private GameObject CraftingUI;
+    private GameObject StorageUI;
     private MouseMovement mouseMovement;
     private GameObject camera;
     public float distance = 3f;
@@ -12,8 +12,8 @@ public class CraftingTable : MonoBehaviour
     void Start()
     {
         camera = GameObject.FindGameObjectWithTag("MainCamera");
-        CraftingUI = GameObject.FindGameObjectWithTag("CraftingUI");
-        CraftingUI.SetActive(false);
+        StorageUI = GameObject.FindGameObjectWithTag("StorageUI");
+        StorageUI.SetActive(false);
         mouseMovement = camera.GetComponent<MouseMovement>();
     }
     
@@ -29,7 +29,7 @@ public class CraftingTable : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E) && !opened)
                 {
                     opened = !opened;
-                    CraftingUI.SetActive(opened);
+                    StorageUI.SetActive(opened);
                     Cursor.visible = opened;
                     Cursor.lockState = opened ? CursorLockMode.None : CursorLockMode.Locked;
                     mouseMovement.enabled = false;
@@ -39,7 +39,7 @@ public class CraftingTable : MonoBehaviour
 
         if (opened && Input.GetKeyDown(KeyCode.Escape))
         {
-            CraftingUI.SetActive(false);
+            StorageUI.SetActive(false);
             opened = false;
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;

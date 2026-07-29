@@ -125,6 +125,21 @@ public class TerrainVisualGenerator : MonoBehaviour
 
     private void PaintTerrain(TerrainData terrainData, int worldSeed)
     {
+        if (grassLayer == null)
+        {
+            grassLayer = Resources.Load<TerrainLayer>("GrassLayer");
+        }
+        if (dirtLayer == null)
+        {
+            dirtLayer = Resources.Load<TerrainLayer>("DirtLayer");
+        }
+
+        if (rockLayer == null)
+        {
+            rockLayer = Resources.Load<TerrainLayer>("RockLayer");
+        }
+        
+        
         if (grassLayer == null || dirtLayer == null || rockLayer == null)
         {
             return;
@@ -133,13 +148,15 @@ public class TerrainVisualGenerator : MonoBehaviour
         int resolution = Mathf.Clamp(Mathf.ClosestPowerOfTwo(alphamapResolution), 64, 512);
 
         terrainData.alphamapResolution = resolution;
-        terrainData.terrainLayers = new TerrainLayer[]
+        TerrainLayer[] layers = new TerrainLayer[3]
         {
             grassLayer,
             dirtLayer,
             rockLayer
         };
 
+        terrainData.terrainLayers = layers;
+        
         float[,,] alphamaps = new float[resolution, resolution, 3];
 
         float dirtOffsetX = worldSeed * 0.031f;
@@ -195,6 +212,8 @@ public class TerrainVisualGenerator : MonoBehaviour
         }
 
         terrainData.SetAlphamaps(0, 0, alphamaps);
+        
+        terrainData.SyncTexture(TerrainData.AlphamapTextureName);
     }
 
     private void SpawnGrassModels(Terrain targetTerrain, TerrainData terrainData, int worldSeed)

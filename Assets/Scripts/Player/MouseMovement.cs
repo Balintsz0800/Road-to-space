@@ -5,8 +5,9 @@ public class MouseMovement : MonoBehaviour
     public float mouseSensivity = 100f;
     public Transform playerBody;
     public Transform orientation;
+    public Transform cameraTarget;
     
-    public float cameraYOffset = 0.8f;
+    public float cameraYOffset = 0f;
     
     public float xRot = 0f;
     public float yRot = 0f;
@@ -15,6 +16,7 @@ public class MouseMovement : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
         if (playerBody != null)
         {
@@ -27,13 +29,15 @@ public class MouseMovement : MonoBehaviour
         float mouseX =  Input.GetAxisRaw("Mouse X") * mouseSensivity * Time.deltaTime;
         float mouseY =  Input.GetAxisRaw("Mouse Y") * mouseSensivity * Time.deltaTime;
         
+        yRot += mouseX;
+        
         xRot -= mouseY;
         xRot = Mathf.Clamp(xRot, -90f, 90f);
         
-        transform.localRotation = Quaternion.Euler(xRot, yRot, 0f);
+        transform.localRotation = Quaternion.Euler(xRot, 0, 0f);
+        playerBody.rotation = Quaternion.Euler(0, yRot, 0f);
         
-        yRot += mouseX;
-        orientation.Rotate(Vector3.up * mouseX);
+        orientation.rotation = playerBody.rotation;
         
     }
 
@@ -41,8 +45,13 @@ public class MouseMovement : MonoBehaviour
     {
         if (playerMovement != null)
         {
-            Vector3 targetPos = new Vector3(playerBody.position.x, playerBody.position.y + cameraYOffset, playerBody.position.z);
-            transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime);
+            Vector3 targetPos = playerBody.position + Vector3.up * cameraYOffset;
+            transform.position = targetPos;
+        }
+
+        if (cameraTarget != null)
+        {
+            transform.position = cameraTarget.position;
         }
     }
 }

@@ -6,13 +6,13 @@ TerrainLayer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Grass
-  m_DiffuseTexture: {fileID: 2800000, guid: a0d31e1dbfa71904988ce2933f497889, type: 3}
-  m_NormalMapTexture: {fileID: 2800000, guid: c2c41b39d91c90f4f88eaba64dc60d7d, type: 3}
+  m_Name: RockLayer
+  m_DiffuseTexture: {fileID: 2800000, guid: 8f082b967770d48448959c5b44a48fd7, type: 3}
+  m_NormalMapTexture: {fileID: 2800000, guid: 92f957aede6ecc948a6e52177feb3821, type: 3}
   m_MaskMapTexture: {fileID: 0}
   m_TileSize: {x: 2, y: 2}
   m_TileOffset: {x: 0, y: 0}
-  m_Specular: {r: 0, g: 0, b: 0, a: 0}
+  m_Specular: {r: 0.3962264, g: 0.36445352, b: 0.36445352, a: 0}
   m_Metallic: 0
   m_Smoothness: 0
   m_NormalScale: 1

@@ -435,7 +435,7 @@ public class TerrainGenerator : MonoBehaviour
             return;
         }
 
-        Vector3 fallbackSpawn = garage.transform.position + garage.transform.forward * 5f;
+        Vector3 fallbackSpawn = garage.transform.position + garage.transform.forward * 3f;
         MovePlayer(GetSafePlayerSpawnPosition(fallbackSpawn));
     }
 
