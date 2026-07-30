@@ -1,8 +1,10 @@
 using UnityEngine;
+using TMPro;
 
 public class PlayerPickup : MonoBehaviour
 {
     public float pickupDistance;
+    public TMP_Text pickupText;
 
     void Update()
     {

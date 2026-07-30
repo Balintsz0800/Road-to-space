@@ -7,21 +7,20 @@ public class DoorAnimation : MonoBehaviour
     private Animator animator;
 
     private bool isOpen = false;
+    
+    public static DoorAnimation instance;
+
+    void Awake()
+    {
+        instance = this;
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         animator = GetComponent<Animator>();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            ToggleDoor();
-        }
-    }
-
-    void ToggleDoor()
+    public void ToggleDoor()
     {
         if (!isOpen)
         {

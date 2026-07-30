@@ -1045,7 +1045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3823afc472e786a40a35703377b80096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TerrainGenerator
-  randomSeedOnStart: 0
+  randomSeedOnStart: 1
   seed: 12345
   terrain: {fileID: 2084262064}
   player: {fileID: 405361845}
@@ -1084,7 +1084,7 @@ MonoBehaviour:
   spawnRules:
   - label: Rock
     prefab: {fileID: 6707108797549677384, guid: 0881d81aa314e604fb045b95ae07ee7e, type: 3}
-    count: 120
+    count: 240
     minGarageDistance: 30
     minObjectDistance: 5
     edgeDistance: 20
@@ -1095,7 +1095,7 @@ MonoBehaviour:
     triesPerObject: 40
   - label: Tree
     prefab: {fileID: 649617978046588681, guid: feaa24085742ab441b454c2c28bb9330, type: 3}
-    count: 200
+    count: 320
     minGarageDistance: 30
     minObjectDistance: 10
     edgeDistance: 40
@@ -1133,7 +1133,7 @@ MonoBehaviour:
   rockAmount: 0.092
   blendNoiseFrequency: 12
   blendNoiseAmount: 0.18
-  spawnGrassModels: 0
+  spawnGrassModels: 1
   grassPrefab: {fileID: 8075251542573186306, guid: 53213453b6cdc1049a568a4a893e449c, type: 3}
   grassCount: 20000
   triesPerGrass: 100
@@ -5910,6 +5910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerPickup
   pickupDistance: 3
+  pickupText: {fileID: 0}
 --- !u!114 &1342262499
 MonoBehaviour:
   m_ObjectHideFlags: 0
