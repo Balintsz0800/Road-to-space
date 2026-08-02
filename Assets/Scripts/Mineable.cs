@@ -6,7 +6,7 @@ public class Mineable : MonoBehaviour
 {
     public int health;
     public Tools toolsScript;
-    public Item dropItem; 
+    public Item dropItem;
     public int amount = 3;
     
     public void Mine()
@@ -14,18 +14,18 @@ public class Mineable : MonoBehaviour
         InventorySlot slot = InventoryManager.instance.slots[InventoryManager.instance.selectedSlot];
         InventoryItem invItem = slot.GetComponentInChildren<InventoryItem>();
 
-        if (invItem != null && invItem.item.itemtype == Item.ItemType.Tool)
+        if (invItem != null && invItem.item.itemtype == Item.ItemType.Pickaxe)
         {
             health -= toolsScript.Damage;
         }
 
-        if (health <= 0 && invItem != null && invItem.item.itemtype == Item.ItemType.Tool)
+        if (health <= 0 && invItem != null && invItem.item.itemtype == Item.ItemType.Pickaxe)
         {
-            BreakStone();
+            Break();
         }
     }
 
-    private void BreakStone()
+    private void Break()
     {
         InventoryManager.instance.AddItem(dropItem, amount);
         Destroy(gameObject);

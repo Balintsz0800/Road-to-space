@@ -22,7 +22,8 @@ public class Item : ScriptableObject
             Rock,
             Iron,
             Fuel,
-            Tool,
+            Axe,
+            Pickaxe,
             BuildingPart,
             Workbanch
         }

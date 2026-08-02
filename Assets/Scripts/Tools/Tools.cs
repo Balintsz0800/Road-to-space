@@ -23,7 +23,14 @@ public class Tools : MonoBehaviour
         InventorySlot slot = InventoryManager.instance.slots[InventoryManager.instance.selectedSlot];
         InventoryItem inventoryItem = slot.GetComponentInChildren<InventoryItem>();
 
-        if (inventoryItem == null || inventoryItem.item.itemtype != Item.ItemType.Tool)
+        if (inventoryItem == null)
+        {
+            return;
+        }
+        
+        Item.ItemType type = inventoryItem.item.itemtype;
+        
+        if (type != Item.ItemType.Axe && type != Item.ItemType.Pickaxe)
         {
             return;
         }

@@ -76,9 +76,11 @@ public class PlayerMovement : MonoBehaviour
             playerSpeed = crouchingSpeed;
         }
         
-        Vector3 targetVelocity = inputDirection * playerSpeed;
+        Vector3 targetVelocity = inputDirection.normalized * playerSpeed;
         Vector3 velocity = rigid.linearVelocity;
-        Vector3 velocityChange = new Vector3(targetVelocity.x - velocity.x, 0, targetVelocity.z - velocity.z);
+        Vector3 velocityChange = targetVelocity - new Vector3(velocity.x, 0, velocity.z);
+        
+        velocityChange = Vector3.ClampMagnitude(velocityChange, 1f);
         
         rigid.AddForce(velocityChange, ForceMode.VelocityChange);
     }
