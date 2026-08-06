@@ -7,8 +7,6 @@ public class Tree : MonoBehaviour
     [SerializeField] private int maxHealth = 100;
     [SerializeField] private int currentHealth;
     
-    public Tools toolsScript;
-    
     [SerializeField] private GameObject LogPrefab;
     [SerializeField] private Transform LogSpawn;
     
@@ -17,14 +15,14 @@ public class Tree : MonoBehaviour
         currentHealth = maxHealth;    
     }
 
-    public void Damage()
+    public void Damage(int damage)
     {
         InventorySlot slot = InventoryManager.instance.slots[InventoryManager.instance.selectedSlot];
         InventoryItem invItem = slot.GetComponentInChildren<InventoryItem>();
 
         if (invItem != null && invItem.item.itemtype == Item.ItemType.Axe)
         {
-            currentHealth -= toolsScript.Damage;
+            currentHealth -= damage;
         }
 
         if (currentHealth <= 0)

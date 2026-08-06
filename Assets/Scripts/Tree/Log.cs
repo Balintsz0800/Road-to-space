@@ -5,8 +5,6 @@ public class Log : MonoBehaviour
     [SerializeField] private int maxHealth = 50;
     [SerializeField] private int currentHealth;
     
-    public Tools toolsScript;
-    
     [SerializeField] private GameObject halfLog1;
     [SerializeField] private GameObject halfLog2;
     [SerializeField] private Transform halfLogSpawn1;
@@ -16,14 +14,14 @@ public class Log : MonoBehaviour
         currentHealth = maxHealth;    
     }
     
-    public void Damage()
+    public void Damage(int damage)
     {
         InventorySlot slot = InventoryManager.instance.slots[InventoryManager.instance.selectedSlot];
         InventoryItem invItem = slot.GetComponentInChildren<InventoryItem>();
 
         if (invItem != null && invItem.item.itemtype == Item.ItemType.Axe)
         {
-            currentHealth -= toolsScript.Damage;
+            currentHealth -= damage;
         }
 
         if (currentHealth <= 0)

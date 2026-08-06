@@ -9,14 +9,14 @@ public class Mineable : MonoBehaviour
     public Item dropItem;
     public int amount = 3;
     
-    public void Mine()
+    public void Mine(int damage)
     {
         InventorySlot slot = InventoryManager.instance.slots[InventoryManager.instance.selectedSlot];
         InventoryItem invItem = slot.GetComponentInChildren<InventoryItem>();
 
         if (invItem != null && invItem.item.itemtype == Item.ItemType.Pickaxe)
         {
-            health -= toolsScript.Damage;
+            health -= damage;
         }
 
         if (health <= 0 && invItem != null && invItem.item.itemtype == Item.ItemType.Pickaxe)

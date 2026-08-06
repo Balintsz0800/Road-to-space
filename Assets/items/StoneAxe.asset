@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: StoneAxe
   m_EditorClassIdentifier: Assembly-CSharp::Item
   itemtype: 3
-  itemPrefab: {fileID: 5486726643093097222, guid: 8ce77ac7bf54ec440aac3052700c8744, type: 3}
-  handPrefab: {fileID: 5486726643093097222, guid: 93f7142edb1a7144986c040237424313, type: 3}
-  durability: 30
+  itemPrefab: {fileID: 2266832740365135528, guid: 8ce77ac7bf54ec440aac3052700c8744, type: 3}
+  handPrefab: {fileID: 2266832740365135528, guid: fcc2cc082f9b2a24ab0543664246dd7a, type: 3}
+  durability: 60
   handPosition: {x: -0.158, y: 0.096, z: -0.029}
   handRotation: {x: 0, y: 0, z: 0}
   handScale: {x: 0.1, y: 0.1, z: 0.1}

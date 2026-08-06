@@ -11,7 +11,8 @@ public class InventoryManager : MonoBehaviour
     public int selectedSlot = -1;
     public Transform dropPoint;
     public Transform handPos;
-    private GameObject currentHandItem;
+    public GameObject currentHandItem;
+    private Item currentHandItemType;
 
     public static InventoryManager instance; 
     
@@ -113,31 +114,45 @@ public class InventoryManager : MonoBehaviour
 
     public void RefreshHandItem()
     {
-        if (currentHandItem != null)
-        {
-            Destroy(currentHandItem);
-            currentHandItem = null;
-        }
-        
         InventorySlot slot = slots[selectedSlot];
         InventoryItem inventoryItem = slot.GetComponentInChildren<InventoryItem>();
 
         if (inventoryItem == null || inventoryItem.item == null || inventoryItem.item.handPrefab == null)
         {
+            if (currentHandItem != null)
+            {
+                Destroy(currentHandItem);
+                currentHandItem = null;
+                currentHandItemType =  null;
+            }
+            
             return;
+        }
+
+        if (currentHandItem != null && currentHandItemType == inventoryItem.item)
+        {
+            return;
+        }
+
+        if (currentHandItem != null)
+        {
+            Destroy(currentHandItem);
         }
         
         currentHandItem = Instantiate(inventoryItem.item.handPrefab, handPos);
+        
         currentHandItem.transform.localPosition = inventoryItem.item.handPosition;
         currentHandItem.transform.localRotation = Quaternion.Euler(inventoryItem.item.handRotation);
         currentHandItem.transform.localScale = inventoryItem.item.handScale;
 
-        foreach (var rigidBody in currentHandItem.GetComponentsInChildren<Rigidbody>())
+        currentHandItemType = inventoryItem.item;
+
+        foreach (Rigidbody rb in currentHandItem.GetComponentsInChildren<Rigidbody>())
         {
-            rigidBody.isKinematic = true;
+            rb.isKinematic = true;
         }
 
-        foreach (var collider in currentHandItem.GetComponentsInChildren<Collider>())
+        foreach (Collider collider in currentHandItem.GetComponentsInChildren<Collider>())
         {
             collider.enabled = false;
         }
@@ -155,7 +170,11 @@ public class InventoryManager : MonoBehaviour
                 {
                     existing.count += amount;
                     existing.RefreshCount();
-                    RefreshHandItem();
+                    if (selectedSlot == i)
+                    {
+                        RefreshHandItem();
+                    }
+                    
                     return true;
                 }
             }
@@ -164,9 +183,11 @@ public class InventoryManager : MonoBehaviour
             {
                 if (slots[i].GetComponentInChildren<InventoryItem>() == null)
                 {
-                    SpawnNewItem(item, slots[i], amount
-                    );
-                    RefreshHandItem();
+                    SpawnNewItem(item, slots[i], amount);
+                    if (selectedSlot == i)
+                    {
+                        RefreshHandItem();
+                    }
                     return true;
                 }
             }
@@ -182,6 +203,10 @@ public class InventoryManager : MonoBehaviour
                 if (slots[i].GetComponentInChildren<InventoryItem>() == null)
                 {
                     SpawnNewItem(item, slots[i], 1);
+                    if (selectedSlot == i)
+                    {
+                        RefreshHandItem();
+                    }
                     placed = true;
                     break;
                 }
@@ -191,7 +216,6 @@ public class InventoryManager : MonoBehaviour
                 return false;
             }
         }
-        RefreshHandItem();
         return true;
     }
 
