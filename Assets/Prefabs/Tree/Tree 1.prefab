@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7142345128937098349}
   - component: {fileID: 8533522083570635323}
   - component: {fileID: 8083660561040045564}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leaf.033
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 662969547914556240}
   - component: {fileID: 4747876759777286102}
   - component: {fileID: 4855475790346692261}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,7 +234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7420969427686302852}
   - component: {fileID: 3690227921891287237}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,7 +273,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Tree
   maxHealth: 100
   currentHealth: 0
-  toolsScript: {fileID: 7826635605658735028, guid: 93f7142edb1a7144986c040237424313, type: 3}
   LogPrefab: {fileID: 3261579868487121358, guid: 1469c3582f70763469c9b1a7a0fddf2d, type: 3}
   LogSpawn: {fileID: 5819525289512094462}
 --- !u!1 &8788347532549549777
@@ -285,7 +284,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5819525289512094462}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LogSpawn1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

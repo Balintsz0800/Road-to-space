@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HalfLog2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8453352c1d4d46f438beca1447887391, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -85,7 +89,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HalfLog
   maxHealth: 25
   currentHealth: 0
-  toolsScript: {fileID: 7826635605658735028, guid: 93f7142edb1a7144986c040237424313, type: 3}
   dropItem: {fileID: 11400000, guid: fa234256d0bcf394eaa40657ee720be0, type: 2}
   amount: 1
 --- !u!64 &5192263453795492479
@@ -118,7 +121,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3092929593841508379}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 4
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}

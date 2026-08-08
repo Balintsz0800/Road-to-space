@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3251502039714827016}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LogSpawn1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,9 +91,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: f8c70013bd76f384b9b284008a9f983f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 117214286460000749, guid: f8c70013bd76f384b9b284008a9f983f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f8c70013bd76f384b9b284008a9f983f, type: 3}
       propertyPath: m_Name
       value: tree
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f8c70013bd76f384b9b284008a9f983f, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -163,7 +175,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Tree
   maxHealth: 100
   currentHealth: 0
-  toolsScript: {fileID: 7826635605658735028, guid: 93f7142edb1a7144986c040237424313, type: 3}
   LogPrefab: {fileID: 5032413634861015030, guid: 5f1de71cd80d47c4bbf4587764e24f21, type: 3}
   LogSpawn: {fileID: 3251502039714827016}
 --- !u!1 &1031010155336280124 stripped

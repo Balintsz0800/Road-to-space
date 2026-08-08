@@ -6,8 +6,8 @@ public class Mining : MonoBehaviour
     public static Mining instance;
 
     public float Range = 5f;
-
     public RaycastHit savedHit;
+    
     public bool isAttacking = false;
 
     private void Awake()

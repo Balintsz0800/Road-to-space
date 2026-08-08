@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6833726422647225891}
   - component: {fileID: 304816032755204495}
   - component: {fileID: 1595852155094340379}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Log
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Log
   maxHealth: 50
   currentHealth: 0
-  toolsScript: {fileID: 7826635605658735028, guid: 93f7142edb1a7144986c040237424313, type: 3}
   halfLog1: {fileID: 3182507681793043034, guid: baf0fbbcf97da6044a31edf7297798e3, type: 3}
   halfLog2: {fileID: 3092929593841508379, guid: 655440f8fe04ea347b78dd9cd95a90e3, type: 3}
   halfLogSpawn1: {fileID: 2679195090974117899}
@@ -143,7 +142,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4497779287482902609}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HalfLogSpawn2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +173,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2679195090974117899}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HalfLogSpawn1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
