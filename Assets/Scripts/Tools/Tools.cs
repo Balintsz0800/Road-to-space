@@ -42,7 +42,7 @@ public class Tools : MonoBehaviour
             return;
         }
         
-        Mineable mineable = Mining.instance.savedHit.collider.GetComponentInParent<Mineable>();
+        Mineable mineable = Mining.instance.savedHit.collider.GetComponent<Mineable>();
         Tree tree =  Mining.instance.savedHit.collider.GetComponentInParent<Tree>();
         Log log = Mining.instance.savedHit.collider.GetComponentInParent<Log>();
         HalfLog halfLog =  Mining.instance.savedHit.collider.GetComponentInParent<HalfLog>();

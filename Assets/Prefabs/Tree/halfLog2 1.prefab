@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HalfLog
   maxHealth: 25
   currentHealth: 0
-  dropItem: {fileID: 11400000, guid: fa234256d0bcf394eaa40657ee720be0, type: 2}
+  dropItem: {fileID: 11400000, guid: b9fdbf7c8737b6243b02ef8da481b050, type: 2}
   amount: 3
 --- !u!64 &3263360811824065218
 MeshCollider:

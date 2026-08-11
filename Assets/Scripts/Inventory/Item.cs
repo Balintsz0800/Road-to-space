@@ -19,8 +19,7 @@ public class Item : ScriptableObject
 
         public enum ItemType
         {
-            Rock,
-            Iron,
+            Ingredients,
             Fuel,
             Axe,
             Pickaxe,

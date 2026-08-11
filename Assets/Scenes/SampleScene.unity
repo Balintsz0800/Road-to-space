@@ -1084,15 +1084,15 @@ MonoBehaviour:
   playerSpawnYOffset: 0.3
   spawnRules:
   - label: Rock
-    prefab: {fileID: 6707108797549677384, guid: 0881d81aa314e604fb045b95ae07ee7e, type: 3}
+    prefab: {fileID: 1683398063951655466, guid: d576ce9c60f552249914fad3dbac0e10, type: 3}
     count: 240
     minGarageDistance: 30
     minObjectDistance: 5
     edgeDistance: 20
     maxSlope: 48
     alignToGround: 1
-    yOffset: 0.7
-    scaleRange: {x: 1, y: 1}
+    yOffset: 0.3
+    scaleRange: {x: 1.5, y: 1.5}
     triesPerObject: 40
   - label: Tree
     prefab: {fileID: 649617978046588681, guid: feaa24085742ab441b454c2c28bb9330, type: 3}
